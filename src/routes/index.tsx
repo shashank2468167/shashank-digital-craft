@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import {
   ArrowRight, Download, Mail, Phone, MapPin, ExternalLink,
   Palette, Box, Sparkles, Layers, Brush, Gamepad2, Package,
-  Globe, Camera, Lightbulb, Github, Linkedin, Send,
+  Globe, Camera, Lightbulb, Send,
 } from "lucide-react";
 import heroImg from "@/assets/hero-illustration.png";
 import profileImg from "@/assets/profile.jpg";
