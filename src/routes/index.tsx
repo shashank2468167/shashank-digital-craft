@@ -36,6 +36,16 @@ function useTypewriter(words: string[], typeMs = 90, deleteMs = 45, holdMs = 140
   return text;
 }
 
+function TypewriterRole() {
+  const text = useTypewriter(ROLES);
+  return (
+    <span className="inline-flex items-baseline">
+      <span className="text-gradient">{text}</span>
+      <span className="ml-1 inline-block w-[3px] h-[0.9em] bg-primary animate-pulse rounded-sm" />
+    </span>
+  );
+}
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
