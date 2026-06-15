@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import {
   ArrowRight, Download, Mail, Phone, MapPin, ExternalLink,
   Palette, Box, Sparkles, Layers, Brush, Gamepad2, Package,
@@ -7,6 +8,33 @@ import {
 } from "lucide-react";
 import heroImg from "@/assets/hero-illustration.png";
 import profileImg from "@/assets/profile.jpg";
+
+const ROLES = ["Graphic Designer", "3D Artist", "Brand Designer", "UI/UX Designer", "Visual Designer"];
+
+function useTypewriter(words: string[], typeMs = 90, deleteMs = 45, holdMs = 1400) {
+  const [text, setText] = useState("");
+  const [i, setI] = useState(0);
+  const [deleting, setDeleting] = useState(false);
+
+  useEffect(() => {
+    const word = words[i % words.length];
+    if (!deleting && text === word) {
+      const t = setTimeout(() => setDeleting(true), holdMs);
+      return () => clearTimeout(t);
+    }
+    if (deleting && text === "") {
+      setDeleting(false);
+      setI((v) => (v + 1) % words.length);
+      return;
+    }
+    const t = setTimeout(() => {
+      setText(deleting ? word.slice(0, text.length - 1) : word.slice(0, text.length + 1));
+    }, deleting ? deleteMs : typeMs);
+    return () => clearTimeout(t);
+  }, [text, deleting, i, words, typeMs, deleteMs, holdMs]);
+
+  return text;
+}
 
 export const Route = createFileRoute("/")({
   head: () => ({
