@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import {
   ArrowRight, Download, Mail, Phone, MapPin, ExternalLink,
   Palette, Box, Sparkles, Layers, Brush, Gamepad2, Package,
@@ -7,6 +8,43 @@ import {
 } from "lucide-react";
 import heroImg from "@/assets/hero-illustration.png";
 import profileImg from "@/assets/profile.jpg";
+
+const ROLES = ["Graphic Designer", "3D Artist", "Brand Designer", "UI/UX Designer", "Visual Designer"];
+
+function useTypewriter(words: string[], typeMs = 90, deleteMs = 45, holdMs = 1400) {
+  const [text, setText] = useState("");
+  const [i, setI] = useState(0);
+  const [deleting, setDeleting] = useState(false);
+
+  useEffect(() => {
+    const word = words[i % words.length];
+    if (!deleting && text === word) {
+      const t = setTimeout(() => setDeleting(true), holdMs);
+      return () => clearTimeout(t);
+    }
+    if (deleting && text === "") {
+      setDeleting(false);
+      setI((v) => (v + 1) % words.length);
+      return;
+    }
+    const t = setTimeout(() => {
+      setText(deleting ? word.slice(0, text.length - 1) : word.slice(0, text.length + 1));
+    }, deleting ? deleteMs : typeMs);
+    return () => clearTimeout(t);
+  }, [text, deleting, i, words, typeMs, deleteMs, holdMs]);
+
+  return text;
+}
+
+function TypewriterRole() {
+  const text = useTypewriter(ROLES);
+  return (
+    <span className="inline-flex items-baseline">
+      <span className="text-gradient">{text}</span>
+      <span className="ml-1 inline-block w-[3px] h-[0.9em] bg-primary animate-pulse rounded-sm" />
+    </span>
+  );
+}
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -85,11 +123,12 @@ function Hero() {
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             Available for freelance projects
           </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05]">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1]">
             Hi, I'm <span className="text-gradient">Shashank Kumar</span>
             <br />
-            <span className="text-foreground/90">Graphic Designer & </span>
-            <span className="text-gradient">3D Artist</span>
+            <span className="text-foreground/90">and I am a passionate</span>
+            <br />
+            <TypewriterRole />
           </h1>
           <p className="mt-6 max-w-xl text-base sm:text-lg text-muted-foreground leading-relaxed">
             A Fashion Communication student from NIFT Srinagar, passionate about visual storytelling,
