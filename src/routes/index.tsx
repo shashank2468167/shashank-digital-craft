@@ -366,14 +366,14 @@ function Services() {
 const projects = [
   {
     t: "H. Radhe Jewellery",
-    tag: "Brand Identity · Graduation",
-    d: "Luxury jewellery brand identity and digital presence — logo, website, social strategy, packaging, stationery, and 3D visualization.",
+    tag: "Brand Identity · Website · Packaging · Social Media · 3D AR Visualization",
+    d: "Luxury jewellery brand identity and digital presence project, including logo refinement, website design, packaging, social media strategy, and AR jewellery try-on visualization.",
     grad: "from-amber-500/30 to-pink-500/30",
   },
   {
-    t: "AR Jewellery Visualization",
-    tag: "3D · Blender · Lens Studio",
-    d: "Realistic 3D jewellery models and animations for AR try-on experiences with Lens Studio.",
+    t: "VR Online Store Experience",
+    tag: "VR · Unreal Engine · Immersive Design",
+    d: "An immersive virtual store experience designed to explore how customers can interact with products in a digital retail environment using VR.",
     grad: "from-purple-500/30 to-blue-500/30",
   },
   {
