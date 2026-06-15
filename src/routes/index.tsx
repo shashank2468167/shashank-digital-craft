@@ -39,12 +39,13 @@ function useTypewriter(words: string[], typeMs = 90, deleteMs = 45, holdMs = 140
 function TypewriterRole() {
   const text = useTypewriter(ROLES);
   return (
-    <span className="inline-flex items-baseline">
-      <span className="text-gradient">{text}</span>
-      <span className="ml-1 inline-block w-[3px] h-[0.9em] bg-primary animate-pulse rounded-sm" />
+    <span className="inline-flex items-baseline text-accent-purple">
+      <span>{text}</span>
+      <span className="ml-1 inline-block w-[3px] h-[0.9em] bg-[#8b5cf6] animate-pulse rounded-sm" />
     </span>
   );
 }
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -91,14 +92,14 @@ const navLinks = [
 
 function Nav() {
   return (
-    <header className="fixed top-0 inset-x-0 z-50 px-4 sm:px-8 py-4">
-      <div className="mx-auto max-w-7xl glass-card flex items-center justify-between px-5 sm:px-8 py-3">
-        <a href="#home" className="font-display font-bold text-lg tracking-tight">
-          Shashank's<span className="text-gradient"> Portfolio</span>
+    <header className="fixed top-0 inset-x-0 z-50 bg-background/95 px-4 sm:px-8 py-5">
+      <div className="mx-auto max-w-7xl flex items-center justify-between">
+        <a href="#home" className="font-display font-semibold text-xl tracking-tight text-foreground">
+          Shashank's Portfolio
         </a>
-        <nav className="hidden md:flex items-center gap-7 text-sm text-muted-foreground">
+        <nav className="hidden md:flex items-center gap-10 text-sm text-foreground">
           {navLinks.map((l) => (
-            <a key={l.href} href={l.href} className="hover:text-foreground transition-colors">
+            <a key={l.href} href={l.href} className="hover:text-accent-purple transition-colors">
               {l.label}
             </a>
           ))}
@@ -111,20 +112,21 @@ function Nav() {
 
 function Hero() {
   return (
-    <section id="home" className="relative pt-36 pb-24 px-4 sm:px-8 overflow-hidden border-b border-white/10">
+    <section id="home" className="relative pt-40 pb-32 px-4 sm:px-8 border-b border-white/15">
       <div className="relative mx-auto max-w-7xl grid lg:grid-cols-[1.1fr_1fr] gap-12 items-center">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.2]">
-            Hi, My name is <span className="text-gradient">Shashank Kumar</span>
+          <h1 className="text-4xl sm:text-5xl lg:text-[3.25rem] font-semibold leading-[1.25]">
+            Hi, My name is <span className="text-accent-purple">Shashank Kumar</span>
             <br />
-            <span className="text-foreground/90">and I am a passionate</span>
+            <span>and I am a passionate</span>
             <br />
             <TypewriterRole />
           </h1>
-          <div className="mt-10 flex flex-wrap gap-3">
+          <div className="mt-10 flex flex-wrap gap-4">
             <a href="#" className="btn-outline">Download Resume</a>
             <a href="#projects" className="btn-outline">View Portfolio</a>
           </div>
+
         </motion.div>
 
         <motion.div
