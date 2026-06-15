@@ -77,14 +77,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Shashank Kumar — Graphic Designer & 3D Artist" },
+      { name: "description", content: "Portfolio of Shashank Kumar, a Fashion Communication student at NIFT Srinagar specializing in branding, UI/UX, and 3D visualization." },
+      { name: "author", content: "Shashank Kumar" },
+      { property: "og:title", content: "Shashank Kumar — Graphic Designer & 3D Artist" },
+      { property: "og:description", content: "Branding, UI/UX, and immersive 3D experiences by Shashank Kumar." },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       {
