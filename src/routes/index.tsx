@@ -113,11 +113,12 @@ function Hero() {
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             Available for freelance projects
           </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05]">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1]">
             Hi, I'm <span className="text-gradient">Shashank Kumar</span>
             <br />
-            <span className="text-foreground/90">Graphic Designer & </span>
-            <span className="text-gradient">3D Artist</span>
+            <span className="text-foreground/90">and I am a passionate</span>
+            <br />
+            <TypewriterRole />
           </h1>
           <p className="mt-6 max-w-xl text-base sm:text-lg text-muted-foreground leading-relaxed">
             A Fashion Communication student from NIFT Srinagar, passionate about visual storytelling,
