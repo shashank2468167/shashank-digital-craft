@@ -83,18 +83,18 @@ function Portfolio() {
 const navLinks = [
   { href: "#home", label: "Home" },
   { href: "#about", label: "About" },
-  { href: "#skills", label: "Skills" },
-  { href: "#work", label: "Work" },
+  { href: "#services", label: "Services" },
   { href: "#projects", label: "Projects" },
-  { href: "#contact", label: "Contact" },
+  { href: "#contact", label: "Contact Me" },
 ];
+
 
 function Nav() {
   return (
     <header className="fixed top-0 inset-x-0 z-50 px-4 sm:px-8 py-4">
       <div className="mx-auto max-w-7xl glass-card flex items-center justify-between px-5 sm:px-8 py-3">
         <a href="#home" className="font-display font-bold text-lg tracking-tight">
-          Shashank<span className="text-gradient">.</span>
+          Shashank's<span className="text-gradient"> Portfolio</span>
         </a>
         <nav className="hidden md:flex items-center gap-7 text-sm text-muted-foreground">
           {navLinks.map((l) => (
@@ -103,68 +103,49 @@ function Nav() {
             </a>
           ))}
         </nav>
-        <a href="#contact" className="btn-primary text-sm">
-          Let's Talk <ArrowRight className="w-4 h-4" />
-        </a>
       </div>
     </header>
   );
 }
 
+
 function Hero() {
   return (
-    <section id="home" className="relative pt-36 pb-24 px-4 sm:px-8 overflow-hidden">
-      <div className="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-primary/20 blur-3xl" />
-      <div className="absolute top-40 -right-20 w-96 h-96 rounded-full bg-secondary/20 blur-3xl" />
-
+    <section id="home" className="relative pt-36 pb-24 px-4 sm:px-8 overflow-hidden border-b border-white/10">
       <div className="relative mx-auto max-w-7xl grid lg:grid-cols-[1.1fr_1fr] gap-12 items-center">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-          <div className="inline-flex items-center gap-2 glass-card px-4 py-2 text-xs text-muted-foreground mb-6">
-            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            Available for freelance projects
-          </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1]">
-            Hi, I'm <span className="text-gradient">Shashank Kumar</span>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.2]">
+            Hi, My name is <span className="text-gradient">Shashank Kumar</span>
             <br />
             <span className="text-foreground/90">and I am a passionate</span>
             <br />
             <TypewriterRole />
           </h1>
-          <p className="mt-6 max-w-xl text-base sm:text-lg text-muted-foreground leading-relaxed">
-            A Fashion Communication student from NIFT Srinagar, passionate about visual storytelling,
-            branding, 3D visualization, and immersive digital experiences.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a href="#projects" className="btn-primary">View Portfolio <ArrowRight className="w-4 h-4" /></a>
-            <a href="#contact" className="btn-outline">Contact Me <Send className="w-4 h-4" /></a>
-            <a href="#" className="btn-outline">Download Resume <Download className="w-4 h-4" /></a>
-          </div>
-          <div className="mt-10 flex items-center gap-8 text-sm">
-            <Stat n="3+" label="Years Creating" />
-            <Stat n="20+" label="Projects" />
-            <Stat n="10+" label="Brands" />
+          <div className="mt-10 flex flex-wrap gap-3">
+            <a href="#" className="btn-outline">Download Resume</a>
+            <a href="#projects" className="btn-outline">View Portfolio</a>
           </div>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
+          initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="relative"
         >
-          <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 to-secondary/30 blur-3xl rounded-full" />
           <img
             src={heroImg}
             alt="Designer at futuristic 3D workstation"
             width={1024}
             height={1024}
-            className="relative w-full max-w-lg mx-auto animate-float drop-shadow-2xl"
+            className="relative w-full max-w-lg mx-auto animate-float"
           />
         </motion.div>
       </div>
     </section>
   );
 }
+
 
 function Stat({ n, label }: { n: string; label: string }) {
   return (
