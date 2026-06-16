@@ -8,6 +8,7 @@ import p23 from "@/assets/hradhe/p23.jpg.asset.json";
 import p24 from "@/assets/hradhe/p24.jpg.asset.json";
 import p26 from "@/assets/hradhe/p26.jpg.asset.json";
 import p27 from "@/assets/hradhe/p27.jpg.asset.json";
+import p29 from "@/assets/hradhe/p29.jpg.asset.json";
 import p28 from "@/assets/hradhe/p28.jpg.asset.json";
 import p30 from "@/assets/hradhe/p30.jpg.asset.json";
 import p31 from "@/assets/hradhe/p31.jpg.asset.json";
@@ -264,7 +265,7 @@ function HRadheCaseStudy() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Figure src={p30.url} alt="Colour palette" caption="Primary & secondary palette" />
             <Figure src={p31.url} alt="Typography system" caption="Typography — Cormorant Garamond, Helvetica" />
-            <Figure src={p29 = p27 ? p27.url : p27.url} alt="Language rules" caption="Language rules" />
+            <Figure src={p29.url} alt="Language rules" caption="Language rules" />
           </div>
 
           {/* Colour swatches */}
