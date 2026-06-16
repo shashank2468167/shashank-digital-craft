@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import {
@@ -379,29 +379,41 @@ function Projects() {
       <div className="mx-auto max-w-6xl">
         <SectionHeader tag="Portfolio" title="Featured Projects" sub="A selection of recent work across branding, 3D, and immersive design." />
         <div className="grid md:grid-cols-2 gap-6">
-          {projects.map((p, i) => (
-            <motion.article
-              key={p.t}
-              {...fadeUp}
-              transition={{ duration: 0.6, delay: i * 0.08 }}
-              className="group glass-card overflow-hidden hover:border-primary/50 transition-all"
-            >
-              <div className={`relative h-56 bg-gradient-to-br ${p.grad} flex items-center justify-center overflow-hidden`}>
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.15),transparent_60%)]" />
-                <div className="text-5xl font-display font-black text-white/30 group-hover:scale-110 transition-transform duration-500">
-                  {p.t.split(" ").map((w) => w[0]).join("").slice(0, 2)}
+          {projects.map((p, i) => {
+            const isHRadhe = p.t === "H. Radhe Jewellery";
+            const cardInner = (
+              <>
+                <div className={`relative h-56 bg-gradient-to-br ${p.grad} flex items-center justify-center overflow-hidden`}>
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.15),transparent_60%)]" />
+                  <div className="text-5xl font-display font-black text-white/30 group-hover:scale-110 transition-transform duration-500">
+                    {p.t.split(" ").map((w) => w[0]).join("").slice(0, 2)}
+                  </div>
                 </div>
-              </div>
-              <div className="p-6">
-                <div className="text-xs text-primary font-mono mb-2">{p.tag}</div>
-                <h3 className="text-xl font-bold mb-2">{p.t}</h3>
-                <p className="text-sm text-muted-foreground mb-4">{p.d}</p>
-                <button className="inline-flex items-center gap-2 text-sm text-secondary hover:text-primary transition-colors">
-                  View case study <ArrowRight className="w-4 h-4" />
-                </button>
-              </div>
-            </motion.article>
-          ))}
+                <div className="p-6">
+                  <div className="text-xs text-primary font-mono mb-2">{p.tag}</div>
+                  <h3 className="text-xl font-bold mb-2">{p.t}</h3>
+                  <p className="text-sm text-muted-foreground mb-4">{p.d}</p>
+                  <span className="inline-flex items-center gap-2 text-sm text-secondary group-hover:text-primary transition-colors">
+                    {isHRadhe ? "View case study" : "View case study"} <ArrowRight className="w-4 h-4" />
+                  </span>
+                </div>
+              </>
+            );
+            return (
+              <motion.article
+                key={p.t}
+                {...fadeUp}
+                transition={{ duration: 0.6, delay: i * 0.08 }}
+                className="group glass-card overflow-hidden hover:border-primary/50 transition-all"
+              >
+                {isHRadhe ? (
+                  <Link to="/projects/h-radhe" className="block">{cardInner}</Link>
+                ) : (
+                  cardInner
+                )}
+              </motion.article>
+            );
+          })}
         </div>
       </div>
     </section>
