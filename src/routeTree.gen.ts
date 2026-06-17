@@ -10,22 +10,22 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as ProjectsHRadheRouteImport } from './routes/projects.h-radhe'
 import { Route as ProjectsVrStoreRouteImport } from './routes/projects.vr-store'
+import { Route as ProjectsHRadheRouteImport } from './routes/projects.h-radhe'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ProjectsHRadheRoute = ProjectsHRadheRouteImport.update({
-  id: '/projects/h-radhe',
-  path: '/projects/h-radhe',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const ProjectsVrStoreRoute = ProjectsVrStoreRouteImport.update({
   id: '/projects/vr-store',
   path: '/projects/vr-store',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsHRadheRoute = ProjectsHRadheRouteImport.update({
+  id: '/projects/h-radhe',
+  path: '/projects/h-radhe',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -68,18 +68,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/projects/h-radhe': {
-      id: '/projects/h-radhe'
-      path: '/projects/h-radhe'
-      fullPath: '/projects/h-radhe'
-      preLoaderRoute: typeof ProjectsHRadheRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/projects/vr-store': {
       id: '/projects/vr-store'
       path: '/projects/vr-store'
       fullPath: '/projects/vr-store'
       preLoaderRoute: typeof ProjectsVrStoreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects/h-radhe': {
+      id: '/projects/h-radhe'
+      path: '/projects/h-radhe'
+      fullPath: '/projects/h-radhe'
+      preLoaderRoute: typeof ProjectsHRadheRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
