@@ -153,9 +153,6 @@ function HRadheCaseStudy() {
             ))}
           </motion.div>
 
-          <motion.div {...fade} className="mt-14 overflow-hidden rounded-2xl border border-white/10">
-            <img src={p19.url} alt="H. Radhe — Polki cover" className="w-full" />
-          </motion.div>
         </div>
       </section>
 
