@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 
-import p19 from "@/assets/hradhe/p19.jpg.asset.json";
+
 import p22 from "@/assets/hradhe/p22.jpg.asset.json";
 import p23 from "@/assets/hradhe/p23.jpg.asset.json";
 import p24 from "@/assets/hradhe/p24.jpg.asset.json";
@@ -38,7 +38,7 @@ export const Route = createFileRoute("/projects/h-radhe")({
       },
       { property: "og:title", content: "H. Radhe Jewellery — Case Study" },
       { property: "og:description", content: "Brand identity, logo, social, website, packaging, 3D & AR for a luxury polki jewellery house." },
-      { property: "og:image", content: p19.url },
+      { property: "og:image", content: p22.url },
     ],
   }),
   component: HRadheCaseStudy,
@@ -447,7 +447,7 @@ function HRadheCaseStudy() {
         <div className="mx-auto max-w-7xl">
           <SectionLabel n="11">Gallery</SectionLabel>
           <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 [&>*]:mb-4">
-            {[p19, p22, p32, p34, p33, p35, p39, p40, p36, p37, p41, p42, p44, p45, p46].map((img, i) => (
+            {[p22, p32, p34, p33, p35, p39, p40, p36, p37, p41, p42, p44, p45, p46].map((img, i) => (
               <motion.img
                 key={i}
                 src={img.url}
