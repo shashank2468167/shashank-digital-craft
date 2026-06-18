@@ -7,7 +7,8 @@ import {
   Globe, Camera, Lightbulb, Send,
 } from "lucide-react";
 import heroImg from "@/assets/hero-illustration.png";
-import profileImg from "@/assets/profile.jpg";
+import profileAsset from "@/assets/profile.png.asset.json";
+const profileImg = profileAsset.url;
 
 const ROLES = ["Graphic Designer", "3D Artist", "Brand Designer", "UI/UX Designer", "Visual Designer"];
 
