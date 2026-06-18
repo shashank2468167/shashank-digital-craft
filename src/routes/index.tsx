@@ -282,7 +282,7 @@ function Experience() {
       <div className="mx-auto max-w-5xl">
         <SectionHeader tag="Experience" title="What I have done so far" />
         <div className="relative">
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary/60 via-secondary/40 to-transparent" />
+          <div className="absolute left-4 md:left-1/2 top-4 bottom-0 -translate-x-1/2 w-[2px] bg-primary/40 z-0" />
           {experience.map((e, i) => (
             <motion.div
               key={e.title}
@@ -291,7 +291,7 @@ function Experience() {
                 i % 2 === 0 ? "" : "md:[&>div]:col-start-2"
               }`}
             >
-              <div className="absolute left-4 md:left-1/2 top-4 -translate-x-1/2 w-3 h-3 rounded-full bg-primary glow-ring" />
+              <div className="absolute left-4 md:left-1/2 top-4 -translate-x-1/2 w-3 h-3 rounded-full bg-primary glow-ring z-10" />
               <div className="pl-12 md:pl-0 md:pr-12 md:text-right md:[&:nth-child(odd)]:text-left">
                 <div className="glass-card p-6">
                   <div className="text-xs text-primary font-mono mb-2">{e.period}</div>
