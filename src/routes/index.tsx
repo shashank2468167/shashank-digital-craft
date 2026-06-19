@@ -282,14 +282,14 @@ function Experience() {
       <div className="mx-auto max-w-5xl">
         <SectionHeader tag="Experience" title="What I have done so far" />
         <div className="relative">
-          <div className="absolute left-4 md:left-1/2 top-4 bottom-0 -translate-x-1/2 w-[2px] bg-primary/40 z-0" />
+          <div className="pointer-events-none absolute left-4 md:left-1/2 top-0 bottom-0 -translate-x-1/2 w-[2px] bg-primary/40 z-0" />
           {experience.map((e, i) => (
             <motion.div
               key={e.title}
               {...fadeUp}
               className="relative mb-10 md:mb-14"
             >
-              <div className="absolute left-4 md:left-1/2 top-4 -translate-x-1/2 w-3 h-3 rounded-full bg-primary glow-ring z-10" />
+              <div className="pointer-events-none absolute left-4 md:left-1/2 top-6 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-primary glow-ring ring-4 ring-background z-10" />
               <div className={`md:grid md:grid-cols-2 md:gap-12 ${i % 2 === 0 ? "" : "md:[&>div]:col-start-2"}`}>
                 <div className={`pl-12 md:pl-0 ${i % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12 md:text-left"}`}>
                   <div className="glass-card p-6">
@@ -469,7 +469,7 @@ function Contact() {
             <div className="space-y-4">
               <ContactItem icon={Mail} label="Email" value="kshashank2468@gmail.com" href="mailto:kshashank2468@gmail.com" />
               <ContactItem icon={Phone} label="Phone" value="+91 6202826097" href="tel:+916202826097" />
-              <ContactItem icon={ExternalLink} label="Behance" value="behance.net/shashank-kumar39" href="https://www.behance.net/shashank-kumar39" />
+              <ContactItem icon={ExternalLink} label="Behance" value="behance.net/shashankkumar39" href="https://www.behance.net/shashankkumar39" />
               <ContactItem icon={MapPin} label="Location" value="Patna, Bihar, India" />
             </div>
           </motion.div>
@@ -513,9 +513,11 @@ function Field({ label, ...p }: { label: string } & React.InputHTMLAttributes<HT
 }
 
 function ContactItem({ icon: Icon, label, value, href }: { icon: typeof Mail; label: string; value: string; href?: string }) {
+  const isExternal = !!href && /^https?:\/\//.test(href);
   const Wrap = href ? "a" : "div";
+  const extraProps = isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {};
   return (
-    <Wrap href={href} className="flex items-center gap-4 group">
+    <Wrap href={href} {...extraProps} className="flex items-center gap-4 group">
       <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-primary/30 to-secondary/30 flex items-center justify-center group-hover:glow-ring transition-shadow">
         <Icon className="w-5 h-5 text-primary" />
       </div>
@@ -533,7 +535,7 @@ function Footer() {
       <div className="mx-auto max-w-6xl flex flex-col sm:flex-row gap-4 items-center justify-between text-sm text-muted-foreground">
         <div>© {new Date().getFullYear()} Shashank Kumar. Crafted with care.</div>
         <div className="flex items-center gap-4">
-          <a href="https://www.behance.net/shashank-kumar39" className="hover:text-primary transition-colors">Behance</a>
+          <a href="https://www.behance.net/shashankkumar39" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">behance.net/shashankkumar39</a>
           <a href="mailto:kshashank2468@gmail.com" className="hover:text-primary transition-colors">Email</a>
           <a href="#home" className="hover:text-primary transition-colors">Back to top ↑</a>
         </div>
