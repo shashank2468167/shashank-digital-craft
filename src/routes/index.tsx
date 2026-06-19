@@ -287,17 +287,17 @@ function Experience() {
             <motion.div
               key={e.title}
               {...fadeUp}
-              className={`relative mb-10 md:mb-14 md:grid md:grid-cols-2 md:gap-12 ${
-                i % 2 === 0 ? "" : "md:[&>div]:col-start-2"
-              }`}
+              className="relative mb-10 md:mb-14"
             >
               <div className="absolute left-4 md:left-1/2 top-4 -translate-x-1/2 w-3 h-3 rounded-full bg-primary glow-ring z-10" />
-              <div className="pl-12 md:pl-0 md:pr-12 md:text-right md:[&:nth-child(odd)]:text-left">
-                <div className="glass-card p-6">
-                  <div className="text-xs text-primary font-mono mb-2">{e.period}</div>
-                  <h3 className="text-lg font-bold">{e.title}</h3>
-                  <div className="text-sm text-secondary mb-3">{e.org}</div>
-                  <p className="text-sm text-muted-foreground">{e.desc}</p>
+              <div className={`md:grid md:grid-cols-2 md:gap-12 ${i % 2 === 0 ? "" : "md:[&>div]:col-start-2"}`}>
+                <div className={`pl-12 md:pl-0 ${i % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12 md:text-left"}`}>
+                  <div className="glass-card p-6">
+                    <div className="text-xs text-primary font-mono mb-2">{e.period}</div>
+                    <h3 className="text-lg font-bold">{e.title}</h3>
+                    <div className="text-sm text-secondary mb-3">{e.org}</div>
+                    <p className="text-sm text-muted-foreground">{e.desc}</p>
+                  </div>
                 </div>
               </div>
             </motion.div>
