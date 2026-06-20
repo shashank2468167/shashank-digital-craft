@@ -11,6 +11,8 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProjectsVrStoreRouteImport } from './routes/projects.vr-store'
+import { Route as ProjectsMediamixRouteImport } from './routes/projects.mediamix'
+import { Route as ProjectsLastNightRouteImport } from './routes/projects.last-night'
 import { Route as ProjectsHRadheRouteImport } from './routes/projects.h-radhe'
 
 const IndexRoute = IndexRouteImport.update({
@@ -23,6 +25,16 @@ const ProjectsVrStoreRoute = ProjectsVrStoreRouteImport.update({
   path: '/projects/vr-store',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProjectsMediamixRoute = ProjectsMediamixRouteImport.update({
+  id: '/projects/mediamix',
+  path: '/projects/mediamix',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsLastNightRoute = ProjectsLastNightRouteImport.update({
+  id: '/projects/last-night',
+  path: '/projects/last-night',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProjectsHRadheRoute = ProjectsHRadheRouteImport.update({
   id: '/projects/h-radhe',
   path: '/projects/h-radhe',
@@ -32,30 +44,54 @@ const ProjectsHRadheRoute = ProjectsHRadheRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/projects/h-radhe': typeof ProjectsHRadheRoute
+  '/projects/last-night': typeof ProjectsLastNightRoute
+  '/projects/mediamix': typeof ProjectsMediamixRoute
   '/projects/vr-store': typeof ProjectsVrStoreRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/projects/h-radhe': typeof ProjectsHRadheRoute
+  '/projects/last-night': typeof ProjectsLastNightRoute
+  '/projects/mediamix': typeof ProjectsMediamixRoute
   '/projects/vr-store': typeof ProjectsVrStoreRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/projects/h-radhe': typeof ProjectsHRadheRoute
+  '/projects/last-night': typeof ProjectsLastNightRoute
+  '/projects/mediamix': typeof ProjectsMediamixRoute
   '/projects/vr-store': typeof ProjectsVrStoreRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/projects/h-radhe' | '/projects/vr-store'
+  fullPaths:
+    | '/'
+    | '/projects/h-radhe'
+    | '/projects/last-night'
+    | '/projects/mediamix'
+    | '/projects/vr-store'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/projects/h-radhe' | '/projects/vr-store'
-  id: '__root__' | '/' | '/projects/h-radhe' | '/projects/vr-store'
+  to:
+    | '/'
+    | '/projects/h-radhe'
+    | '/projects/last-night'
+    | '/projects/mediamix'
+    | '/projects/vr-store'
+  id:
+    | '__root__'
+    | '/'
+    | '/projects/h-radhe'
+    | '/projects/last-night'
+    | '/projects/mediamix'
+    | '/projects/vr-store'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ProjectsHRadheRoute: typeof ProjectsHRadheRoute
+  ProjectsLastNightRoute: typeof ProjectsLastNightRoute
+  ProjectsMediamixRoute: typeof ProjectsMediamixRoute
   ProjectsVrStoreRoute: typeof ProjectsVrStoreRoute
 }
 
@@ -75,6 +111,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProjectsVrStoreRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/projects/mediamix': {
+      id: '/projects/mediamix'
+      path: '/projects/mediamix'
+      fullPath: '/projects/mediamix'
+      preLoaderRoute: typeof ProjectsMediamixRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects/last-night': {
+      id: '/projects/last-night'
+      path: '/projects/last-night'
+      fullPath: '/projects/last-night'
+      preLoaderRoute: typeof ProjectsLastNightRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/projects/h-radhe': {
       id: '/projects/h-radhe'
       path: '/projects/h-radhe'
@@ -88,6 +138,8 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ProjectsHRadheRoute: ProjectsHRadheRoute,
+  ProjectsLastNightRoute: ProjectsLastNightRoute,
+  ProjectsMediamixRoute: ProjectsMediamixRoute,
   ProjectsVrStoreRoute: ProjectsVrStoreRoute,
 }
 export const routeTree = rootRouteImport
