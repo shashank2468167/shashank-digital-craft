@@ -386,6 +386,10 @@ function Projects() {
                 ? "/projects/h-radhe"
                 : p.t === "VR Online Store Experience"
                 ? "/projects/vr-store"
+                : p.t === "The Last Night"
+                ? "/projects/last-night"
+                : p.t === "MEDIAMIX Internship"
+                ? "/projects/mediamix"
                 : null;
             const cardInner = (
               <>
