@@ -1,0 +1,554 @@
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { motion } from "framer-motion";
+import { ArrowLeft, ArrowUpRight } from "lucide-react";
+
+import p7 from "@/assets/mediamix/mm_page_7.jpg.asset.json";
+import p9 from "@/assets/mediamix/mm_page_9.jpg.asset.json";
+import p11 from "@/assets/mediamix/mm_page_11.jpg.asset.json";
+import p12 from "@/assets/mediamix/mm_page_12.jpg.asset.json";
+import p13 from "@/assets/mediamix/mm_page_13.jpg.asset.json";
+import p14 from "@/assets/mediamix/mm_page_14.jpg.asset.json";
+import p15 from "@/assets/mediamix/mm_page_15.jpg.asset.json";
+import p17 from "@/assets/mediamix/mm_page_17.jpg.asset.json";
+import p18 from "@/assets/mediamix/mm_page_18.jpg.asset.json";
+import p19 from "@/assets/mediamix/mm_page_19.jpg.asset.json";
+import p21 from "@/assets/mediamix/mm_page_21.jpg.asset.json";
+import p22 from "@/assets/mediamix/mm_page_22.jpg.asset.json";
+import p23 from "@/assets/mediamix/mm_page_23.jpg.asset.json";
+import p25 from "@/assets/mediamix/mm_page_25.jpg.asset.json";
+import p27 from "@/assets/mediamix/mm_page_27.jpg.asset.json";
+import p28 from "@/assets/mediamix/mm_page_28.jpg.asset.json";
+import p29 from "@/assets/mediamix/mm_page_29.jpg.asset.json";
+import p31 from "@/assets/mediamix/mm_page_31.jpg.asset.json";
+import p32 from "@/assets/mediamix/mm_page_32.jpg.asset.json";
+import p33 from "@/assets/mediamix/mm_page_33.jpg.asset.json";
+import p35 from "@/assets/mediamix/mm_page_35.jpg.asset.json";
+import p37 from "@/assets/mediamix/mm_page_37.jpg.asset.json";
+import p38 from "@/assets/mediamix/mm_page_38.jpg.asset.json";
+
+export const Route = createFileRoute("/projects/mediamix")({
+  head: () => ({
+    meta: [
+      { title: "MEDIAMIX Internship — Case Study · Shashank Kumar" },
+      {
+        name: "description",
+        content:
+          "Graphic Design Internship at MEDIAMIX, Gurgaon (Dec 2024 – Feb 2025) — social media creatives, reels, branding and marketing assets for iVoltaa, PIR, Silverglades, Saan Verdanté, The Food Street, Roslyn Coffee and Wheel of Wellness.",
+      },
+      { property: "og:title", content: "MEDIAMIX Internship — Case Study" },
+      {
+        property: "og:description",
+        content:
+          "11 weeks of brand work, social design, reels and marketing assets for seven clients at MEDIAMIX Gurgaon.",
+      },
+      { property: "og:image", content: p11.url },
+    ],
+  }),
+  component: MediaMixCaseStudy,
+});
+
+const fade = {
+  initial: { opacity: 0, y: 24 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, margin: "-80px" },
+  transition: { duration: 0.7, ease: "easeOut" as const },
+};
+
+function Nav() {
+  return (
+    <header className="fixed top-0 inset-x-0 z-50 bg-background/90 backdrop-blur-md px-4 sm:px-8 py-5 border-b border-white/5">
+      <div className="mx-auto max-w-7xl flex items-center justify-between">
+        <Link to="/" className="font-display font-semibold text-xl tracking-tight">
+          Shashank's Portfolio
+        </Link>
+        <Link
+          to="/"
+          hash="projects"
+          className="inline-flex items-center gap-2 text-sm text-foreground/80 hover:text-accent-purple transition-colors"
+        >
+          <ArrowLeft className="w-4 h-4" /> Back to portfolio
+        </Link>
+      </div>
+    </header>
+  );
+}
+
+function Pill({ children }: { children: React.ReactNode }) {
+  return (
+    <span className="inline-flex items-center text-[11px] uppercase tracking-[0.22em] px-3 py-1.5 rounded-full border border-white/15 text-foreground/80">
+      {children}
+    </span>
+  );
+}
+
+function SectionLabel({ n, children }: { n: string; children: React.ReactNode }) {
+  return (
+    <div className="flex items-center gap-4 mb-6">
+      <span className="text-xs font-mono text-accent-purple">{n}</span>
+      <span className="h-px flex-1 bg-white/10" />
+      <span className="text-xs uppercase tracking-[0.3em] text-foreground/60">{children}</span>
+    </div>
+  );
+}
+
+function Figure({
+  src,
+  alt,
+  caption,
+  ratio = "aspect-[4/5]",
+}: {
+  src: string;
+  alt: string;
+  caption?: string;
+  ratio?: string;
+}) {
+  return (
+    <motion.figure {...fade} className="space-y-3">
+      <div className={`overflow-hidden rounded-xl border border-white/10 bg-[#0a0a1f] ${ratio}`}>
+        <img
+          src={src}
+          alt={alt}
+          loading="lazy"
+          className="w-full h-full object-contain hover:scale-[1.02] transition-transform duration-700"
+        />
+      </div>
+      {caption && <figcaption className="text-xs text-foreground/50">{caption}</figcaption>}
+    </motion.figure>
+  );
+}
+
+const meta = [
+  { k: "Company", v: "MEDIAMIX Branding & Communications, Gurgaon" },
+  { k: "Role", v: "Graphic Design Intern" },
+  { k: "Duration", v: "Dec 2024 – Feb 2025 · 11 Weeks" },
+  { k: "Tools", v: "Photoshop · Illustrator · After Effects" },
+];
+
+const deliverables = [
+  "Social Media Design",
+  "Instagram Reels",
+  "Website Banners",
+  "Branding & Stationery",
+  "Promotional Collateral",
+  "Festival Creatives",
+  "Recipe Carousels",
+  "Menu & Catalog Design",
+];
+
+const clients = [
+  { n: "iVoltaa", t: "Tech · Cables & Connectors", d: "7 posts and 2 reels — high-tech aesthetic, brand colours, performance-driven copy." },
+  { n: "PIR Brand", t: "FMCG · Mustard Oil", d: "7 carousels, 5 posts, business cards and promotion-table graphics." },
+  { n: "Silverglades", t: "Real Estate", d: "Maha Shivratri reel — two visual options, bold and subtle." },
+  { n: "Saan Verdanté", t: "Real Estate · Sector 95 Gurugram", d: "Nature-inspired social posts and festival creatives." },
+  { n: "The Food Street", t: "F&B · 226K Instagram", d: "Food reels and posts for top brands like KFC, Costa and Pizza Hut." },
+  { n: "Roslyn Coffee", t: "F&B · Café", d: "A clean, minimal menu — no unnecessary elements, just a sleek layout." },
+  { n: "Wheel of Wellness", t: "Health · Doctor-led Initiative", d: "Catalog design for well-being and lifestyle classes." },
+];
+
+const process = [
+  { n: "01", t: "Brief", d: "Client requirements, channel, tone and asset list from the account lead." },
+  { n: "02", t: "Reference", d: "Brand audit — past creatives, brand colours, typography and category benchmarks." },
+  { n: "03", t: "Concept", d: "Rough layouts and copy directions for review with the senior designer." },
+  { n: "04", t: "Design", d: "Final artwork in Illustrator and Photoshop, motion in After Effects." },
+  { n: "05", t: "Review", d: "Internal QC and client rounds — colour, typography, placement." },
+  { n: "06", t: "Delivery", d: "Final files exported for Instagram, web and print specs." },
+];
+
+const tools = [
+  { n: "Adobe Photoshop", d: "Compositing, retouching, banners and photo-led social posts." },
+  { n: "Adobe Illustrator", d: "Logo work, vector posts, packaging mock-ups and branded stationery." },
+  { n: "Adobe After Effects", d: "Instagram reels, kinetic typography and animated product collages." },
+];
+
+const learnings = [
+  "Working at agency pace — turning briefs into final files inside a week.",
+  "Designing inside seven different brand systems without losing each voice.",
+  "Translating product features into one strong line + one strong image.",
+  "Building creatives that read in 1.5 seconds in a thumb-scroll feed.",
+  "Handling client revisions — separating taste from brand-fit feedback.",
+  "Moving between Photoshop, Illustrator and After Effects as a single pipeline.",
+];
+
+function MediaMixCaseStudy() {
+  return (
+    <div className="min-h-screen bg-background text-foreground">
+      <Nav />
+
+      {/* HERO */}
+      <section className="relative pt-32 pb-16 px-4 sm:px-8 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(139,92,246,0.18),transparent_60%),radial-gradient(circle_at_80%_30%,rgba(109,139,255,0.15),transparent_55%)] pointer-events-none" />
+        <div className="relative mx-auto max-w-7xl">
+          <motion.div {...fade} className="max-w-4xl">
+            <div className="flex flex-wrap items-center gap-3 mb-6">
+              <Pill>Case Study 04</Pill>
+              <Pill>Internship · Agency</Pill>
+              <Pill>Branding · Social</Pill>
+            </div>
+            <h1 className="font-display text-5xl sm:text-7xl lg:text-[6rem] leading-[0.95] font-semibold tracking-tight">
+              MEDIAMIX
+              <br />
+              <span className="text-accent-purple italic font-light">Internship.</span>
+            </h1>
+            <p className="mt-8 text-lg sm:text-xl text-foreground/70 max-w-2xl leading-relaxed">
+              Eleven weeks as a Graphic Design Intern at MEDIAMIX Gurgaon —
+              designing social media creatives, reels, website banners and
+              branding assets for seven clients across tech, F&amp;B, real
+              estate and wellness.
+            </p>
+          </motion.div>
+
+          <motion.div
+            {...fade}
+            className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6 pb-12 border-b border-white/10"
+          >
+            {meta.map((m) => (
+              <div key={m.k}>
+                <div className="text-[11px] uppercase tracking-[0.25em] text-foreground/45 mb-2">{m.k}</div>
+                <div className="text-sm text-foreground/95">{m.v}</div>
+              </div>
+            ))}
+          </motion.div>
+
+          <motion.div {...fade} className="mt-8 flex flex-wrap gap-2">
+            {deliverables.map((d) => (
+              <span
+                key={d}
+                className="text-xs px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-foreground/70"
+              >
+                {d}
+              </span>
+            ))}
+          </motion.div>
+
+          {/* HERO IMAGE — clients */}
+          <div className="mt-14">
+            <Figure src={p7.url} alt="MEDIAMIX clients — iVoltaa, PIR, Silverglades, Saan Verdanté, Wheel of Wellness, Roslyn Coffee" ratio="aspect-[16/10]" caption="Seven clients · eleven weeks · one design pipeline." />
+          </div>
+        </div>
+      </section>
+
+      {/* OVERVIEW */}
+      <section className="px-4 sm:px-8 py-24">
+        <div className="mx-auto max-w-6xl">
+          <SectionLabel n="01">Internship Overview</SectionLabel>
+          <div className="grid lg:grid-cols-[1.1fr_1fr] gap-12 items-start">
+            <motion.div {...fade} className="space-y-6">
+              <h2 className="font-display text-3xl sm:text-5xl leading-[1.1] font-semibold">
+                Agency pace. <span className="text-accent-purple italic font-light">Seven brand systems. One designer.</span>
+              </h2>
+              <p className="text-foreground/75 leading-relaxed">
+                As a Graphic Design Intern at MEDIAMIX, I focused on creating
+                engaging social media graphics and website banners that aligned
+                with each brand's identity. I collaborated with the team to
+                design visually appealing content for digital platforms, keeping
+                consistency and effectiveness across every marketing campaign.
+              </p>
+              <p className="text-foreground/75 leading-relaxed">
+                The internship sharpened my skills in layout, typography and
+                colour theory inside a fast-paced creative environment — and
+                taught me how to switch between brand voices without losing
+                the strength of any single one.
+              </p>
+            </motion.div>
+            <Figure src={p9.url} alt="MEDIAMIX company profile" ratio="aspect-[3/4]" />
+          </div>
+        </div>
+      </section>
+
+      {/* ABOUT MEDIAMIX */}
+      <section className="px-4 sm:px-8 py-24 bg-white/[0.02] border-y border-white/5">
+        <div className="mx-auto max-w-6xl">
+          <SectionLabel n="02">About MEDIAMIX</SectionLabel>
+          <motion.div {...fade} className="max-w-3xl">
+            <h2 className="font-display text-3xl sm:text-5xl leading-[1.05] font-semibold mb-6">
+              Tailor-made brand identity for <span className="text-accent-purple italic font-light">every venture they touch.</span>
+            </h2>
+            <p className="text-foreground/75 leading-relaxed mb-4">
+              MEDIAMIX Branding &amp; Communications is a Delhi-based creative
+              agency that thrives on building one-of-a-kind brand identities.
+              Their dynamic work culture and specialization in distinctive
+              design language is what puts each client on the map.
+            </p>
+            <p className="text-foreground/75 leading-relaxed">
+              The agency is an amalgamation of innovative design, accessible
+              technology and a simple approach — a deep dive into design while
+              staying rooted in the fundamentals of digital marketing.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* MY ROLE */}
+      <section className="px-4 sm:px-8 py-24">
+        <div className="mx-auto max-w-6xl">
+          <SectionLabel n="03">My Role &amp; Responsibilities</SectionLabel>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {[
+              ["Social Media Design", "Instagram posts, carousels and stories across seven brands."],
+              ["Reels &amp; Motion", "Animated product collages and festival reels in After Effects."],
+              ["Website Banners", "Hero banners and campaign creatives for client websites."],
+              ["Branding Collateral", "Business cards, promotion tables and stationery for PIR Brand."],
+              ["Catalogs &amp; Menus", "Clean, functional catalog for Wheel of Wellness and a sleek menu for Roslyn."],
+              ["Festival Creatives", "Lohri, Vasant Panchami, Makar Sankranti, Maha Shivratri — on brand for each client."],
+            ].map(([t, d]) => (
+              <motion.div
+                {...fade}
+                key={t}
+                className="rounded-xl border border-white/10 p-6 bg-white/[0.02] hover:border-accent-purple/40 transition-colors"
+              >
+                <div className="text-sm font-semibold mb-2" dangerouslySetInnerHTML={{ __html: t }} />
+                <div className="text-sm text-foreground/65 leading-relaxed" dangerouslySetInnerHTML={{ __html: d }} />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CLIENTS GRID */}
+      <section className="px-4 sm:px-8 py-24 bg-white/[0.02] border-y border-white/5">
+        <div className="mx-auto max-w-6xl">
+          <SectionLabel n="04">Client Projects</SectionLabel>
+          <motion.h2 {...fade} className="font-display text-3xl sm:text-4xl leading-tight font-semibold mb-12 max-w-3xl">
+            Seven brands. Seven languages. One design system in my head.
+          </motion.h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {clients.map((c, i) => (
+              <motion.div
+                {...fade}
+                key={c.n}
+                className="rounded-xl border border-white/10 p-6 bg-gradient-to-br from-white/[0.04] to-transparent"
+              >
+                <div className="text-xs font-mono text-accent-purple mb-3">{String(i + 1).padStart(2, "0")}</div>
+                <div className="font-display text-lg font-semibold">{c.n}</div>
+                <div className="text-[11px] uppercase tracking-[0.2em] text-foreground/50 mb-3">{c.t}</div>
+                <div className="text-sm text-foreground/70 leading-relaxed">{c.d}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* IVOLTAA */}
+      <section className="px-4 sm:px-8 py-24">
+        <div className="mx-auto max-w-6xl">
+          <SectionLabel n="05">iVoltaa · Tech</SectionLabel>
+          <div className="grid lg:grid-cols-2 gap-12 items-start mb-10">
+            <motion.div {...fade}>
+              <h2 className="font-display text-3xl sm:text-4xl leading-tight font-semibold mb-6">
+                Unleash A1 audio. Stay seamlessly powered.
+              </h2>
+              <p className="text-foreground/75 leading-relaxed mb-4">
+                iVoltaa is a tech brand specializing in high-quality cables,
+                connectors and chargers. The brief was to translate a sleek,
+                performance-driven product range into social creatives that
+                kept the brand's modern, tech-savvy aesthetic.
+              </p>
+              <p className="text-foreground/75 leading-relaxed">
+                I designed 7 social posts and 2 reels in After Effects —
+                product hero shots, festival creatives for Lohri, Vasant
+                Panchami and Makar Sankranti, and an animated collage for
+                the HDMI 2.0 cable.
+              </p>
+            </motion.div>
+            <Figure src={p11.url} alt="iVoltaa social post hero — A1 audio cable" />
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <Figure src={p12.url} alt="iVoltaa festival creatives — Lohri, Vasant Panchami, Makar Sankranti" caption="Festival creatives — Lohri, Vasant Panchami, Makar Sankranti." />
+            <Figure src={p13.url} alt="iVoltaa 100W super fast charging post" caption="Pass the power — 100W super fast charging campaign." />
+          </div>
+          <div className="grid md:grid-cols-2 gap-6 mt-6">
+            <Figure src={p14.url} alt="iVoltaa audio cable hero — race car scene" caption="Ignite your music — flawless, uninterrupted sound." />
+            <Figure src={p15.url} alt="iVoltaa Instagram Reel — animated product collage" caption="Reel — animated product collage in After Effects." />
+          </div>
+        </div>
+      </section>
+
+      {/* PIR */}
+      <section className="px-4 sm:px-8 py-24 bg-white/[0.02] border-y border-white/5">
+        <div className="mx-auto max-w-6xl">
+          <SectionLabel n="06">PIR Brand · Mustard Oil</SectionLabel>
+          <div className="grid lg:grid-cols-[1.1fr_1fr] gap-12 items-start mb-10">
+            <motion.div {...fade}>
+              <h2 className="font-display text-3xl sm:text-4xl leading-tight font-semibold mb-6">
+                Recipes, immunity and a brand built on purity.
+              </h2>
+              <p className="text-foreground/75 leading-relaxed mb-4">
+                For PIR, a mustard oil brand, I designed 7 recipe carousels
+                and 5 Instagram posts — educating the audience with healthy,
+                tasty recipes while positioning the oil as a healthier kitchen
+                choice.
+              </p>
+              <p className="text-foreground/75 leading-relaxed">
+                I also designed PIR's business cards and a promotion-table
+                graphic — a new learning experience in scale, placement and
+                physical-format design.
+              </p>
+            </motion.div>
+            <Figure src={p17.url} alt="PIR Kashmiri shrimp dumplings recipe carousel" caption="Recipe carousel — Kashmiri shrimp dumplings." />
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            <Figure src={p18.url} alt="PIR immunity campaign and recipe posts" />
+            <Figure src={p19.url} alt="PIR lamb recipe carousel" />
+            <Figure src={p21.url} alt="PIR business cards" caption="Business cards — director set." />
+          </div>
+          <div className="grid md:grid-cols-2 gap-6 mt-6">
+            <Figure src={p22.url} alt="PIR Musta Pure — Purity you can taste" ratio="aspect-[16/10]" />
+            <Figure src={p23.url} alt="PIR promotion table graphic" ratio="aspect-[16/10]" caption="Promotion-table graphic — Purity you can taste." />
+          </div>
+        </div>
+      </section>
+
+      {/* SILVERGLADES + SAAN VERDANTÉ */}
+      <section className="px-4 sm:px-8 py-24">
+        <div className="mx-auto max-w-6xl">
+          <SectionLabel n="07">Silverglades &amp; Saan Verdanté · Real Estate</SectionLabel>
+          <motion.h2 {...fade} className="font-display text-3xl sm:text-4xl leading-tight font-semibold mb-10 max-w-3xl">
+            Two real-estate brands, two very different voices.
+          </motion.h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <Figure src={p25.url} alt="Silverglades Maha Shivratri reel" caption="Silverglades — Maha Shivratri reel, two visual options." />
+            <Figure src={p27.url} alt="Saan Verdanté Sector 95 Gurugram social post" caption="Saan Verdanté — Sector 95 Gurugram launch post." />
+          </div>
+          <div className="grid md:grid-cols-2 gap-6 mt-6">
+            <Figure src={p28.url} alt="Saan Verdanté — Nature Inspired Living" caption="Nature Inspired Living — Saan Verdanté brand storytelling." />
+            <Figure src={p29.url} alt="Saan Verdanté Instagram profile" caption="Saan Verdanté — Instagram presence." />
+          </div>
+        </div>
+      </section>
+
+      {/* THE FOOD STREET */}
+      <section className="px-4 sm:px-8 py-24 bg-white/[0.02] border-y border-white/5">
+        <div className="mx-auto max-w-6xl">
+          <SectionLabel n="08">The Food Street · F&amp;B</SectionLabel>
+          <div className="grid lg:grid-cols-2 gap-12 items-start mb-10">
+            <motion.div {...fade}>
+              <h2 className="font-display text-3xl sm:text-4xl leading-tight font-semibold mb-6">
+                A feast for the eyes — at 226K-follower scale.
+              </h2>
+              <p className="text-foreground/75 leading-relaxed">
+                The Food Street's Instagram is a feast for the eyes,
+                featuring tempting food content from top brands like KFC,
+                Costa Coffee and Pizza Hut. I designed reels and posts
+                under the brand's high-energy food language — sounds that
+                taste as good as they feel.
+              </p>
+            </motion.div>
+            <Figure src={p31.url} alt="The Food Street Instagram profile grid" ratio="aspect-[4/3]" />
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            <Figure src={p32.url} alt="The Food Street reel — KFC, paratha, pizza" />
+            <Figure src={p33.url} alt="The Food Street reel — KFC bucket" />
+          </div>
+        </div>
+      </section>
+
+      {/* ROSLYN + WHEEL */}
+      <section className="px-4 sm:px-8 py-24">
+        <div className="mx-auto max-w-6xl">
+          <SectionLabel n="09">Roslyn Coffee &amp; Wheel of Wellness</SectionLabel>
+          <div className="grid md:grid-cols-2 gap-6">
+            <Figure src={p35.url} alt="Roslyn Coffee menu" caption="Roslyn Coffee — minimal, functional menu." />
+            <Figure src={p37.url} alt="Wheel of Wellness catalog cover" caption="Wheel of Wellness — Learn to fit living." />
+          </div>
+          <div className="mt-6">
+            <Figure src={p38.url} alt="Wheel of Wellness catalog process — Requirement, Plan, Action, Result, Monitoring" ratio="aspect-[16/10]" caption="Wheel of Wellness — process catalog spread." />
+          </div>
+        </div>
+      </section>
+
+      {/* DESIGN PROCESS */}
+      <section className="px-4 sm:px-8 py-24 bg-white/[0.02] border-y border-white/5">
+        <div className="mx-auto max-w-6xl">
+          <SectionLabel n="10">Design Process</SectionLabel>
+          <motion.h2 {...fade} className="font-display text-3xl sm:text-4xl leading-tight font-semibold mb-12">
+            Brief to delivery, every week, every client.
+          </motion.h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {process.map((s) => (
+              <motion.div
+                {...fade}
+                key={s.n}
+                className="rounded-xl border border-white/10 p-6 bg-gradient-to-br from-white/[0.04] to-transparent"
+              >
+                <div className="text-xs font-mono text-accent-purple mb-3">{s.n}</div>
+                <div className="font-display text-lg font-semibold mb-2">{s.t}</div>
+                <div className="text-sm text-foreground/65 leading-relaxed">{s.d}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* TOOLS */}
+      <section className="px-4 sm:px-8 py-24">
+        <div className="mx-auto max-w-6xl">
+          <SectionLabel n="11">Tools Used</SectionLabel>
+          <div className="grid sm:grid-cols-3 gap-5">
+            {tools.map((t) => (
+              <motion.div
+                {...fade}
+                key={t.n}
+                className="rounded-xl border border-white/10 p-6 bg-white/[0.02] hover:border-accent-purple/40 transition-colors"
+              >
+                <div className="font-display text-lg font-semibold mb-2">{t.n}</div>
+                <div className="text-sm text-foreground/65 leading-relaxed">{t.d}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* LEARNINGS */}
+      <section className="px-4 sm:px-8 py-24 bg-white/[0.02] border-y border-white/5">
+        <div className="mx-auto max-w-6xl">
+          <SectionLabel n="12">Key Learnings &amp; Growth</SectionLabel>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {learnings.map((l, i) => (
+              <motion.div
+                {...fade}
+                key={i}
+                className="rounded-xl border border-white/10 p-6 bg-gradient-to-br from-white/[0.04] to-transparent"
+              >
+                <div className="text-xs font-mono text-accent-purple mb-3">{String(i + 1).padStart(2, "0")}</div>
+                <div className="text-sm text-foreground/80 leading-relaxed">{l}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FINAL OUTCOME */}
+      <section className="px-4 sm:px-8 py-24">
+        <div className="mx-auto max-w-6xl">
+          <SectionLabel n="13">Final Outcome</SectionLabel>
+          <motion.div {...fade} className="max-w-3xl">
+            <h2 className="font-display text-3xl sm:text-5xl leading-[1.05] font-semibold mb-6">
+              Eleven weeks. Seven clients. <span className="text-accent-purple italic font-light">One sharper designer.</span>
+            </h2>
+            <p className="text-foreground/75 leading-relaxed">
+              The internship ended with a full body of agency-shipped work —
+              live on Instagram feeds, printed on tables, sitting in client
+              inboxes as reels. More importantly, it gave me the muscle
+              memory of agency pace: brief, concept, design, revise, ship,
+              repeat.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* FOOTER NAV */}
+      <section className="px-4 sm:px-8 py-16 border-t border-white/5">
+        <div className="mx-auto max-w-6xl flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
+          <Link to="/" hash="projects" className="inline-flex items-center gap-2 text-foreground/80 hover:text-accent-purple transition-colors">
+            <ArrowLeft className="w-4 h-4" /> All projects
+          </Link>
+          <Link to="/projects/last-night" className="inline-flex items-center gap-2 text-foreground/80 hover:text-accent-purple transition-colors">
+            Next case study — The Last Night <ArrowUpRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </section>
+    </div>
+  );
+}
