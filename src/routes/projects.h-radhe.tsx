@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 
 
-import p22 from "@/assets/hradhe/p22.jpg.asset.json";
+import p22 from "@/assets/hradhe/p60.png.asset.json";
 import p23 from "@/assets/hradhe/p60.png.asset.json";
 import p24 from "@/assets/hradhe/p24.jpg.asset.json";
 import p26 from "@/assets/hradhe/p26.jpg.asset.json";
