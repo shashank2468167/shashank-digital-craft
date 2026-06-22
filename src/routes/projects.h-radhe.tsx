@@ -23,7 +23,11 @@ import p41 from "@/assets/hradhe/ip1.jpg.asset.json";
 import p42 from "@/assets/hradhe/ip8.jpg.asset.json";
 import p44 from "@/assets/hradhe/ip16.jpg.asset.json";
 import p45 from "@/assets/hradhe/p45.jpg.asset.json";
-import websiteVideo from "@/assets/hradhe/website.mp4.asset.json";
+import websiteVideo from "@/assets/hradhe/website-showcase.webm.asset.json";
+import websitePoster from "@/assets/hradhe/website-poster.jpg.asset.json";
+import arTryon from "@/assets/hradhe/ar-tryon.png.asset.json";
+import necklace3d from "@/assets/hradhe/necklace-3d.png.asset.json";
+import packagingSet from "@/assets/hradhe/packaging-set.png.asset.json";
 
 export const Route = createFileRoute("/projects/h-radhe")({
   head: () => ({
