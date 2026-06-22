@@ -436,7 +436,7 @@ function HRadheCaseStudy() {
                 ))}
               </div>
             </motion.div>
-            <Figure src={p41.url} alt="Packaging visual" ratio="aspect-[4/5]" />
+            <Figure src={packagingSet.url} alt="Complete packaging & stationery system" ratio="aspect-[4/5]" />
           </div>
         </div>
       </section>
