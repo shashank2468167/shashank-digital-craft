@@ -326,7 +326,7 @@ function HRadheCaseStudy() {
             <h3 className="text-sm uppercase tracking-[0.3em] text-foreground/60 mb-6">Polki & Jadau craft creatives</h3>
             <div className="grid md:grid-cols-2 gap-6">
               <Figure src={p39.url} alt="Polki creative" caption="Polki — diamonds in their purest form" />
-              <Figure src={p40.url} alt="Jadau creative" caption="Jadau — the art of setting, perfected by hand" />
+              <Figure src={p40.url} alt="Jadau creative" caption="Polki — diamonds in their purest form" />
             </div>
           </div>
 
