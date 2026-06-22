@@ -409,8 +409,8 @@ function HRadheCaseStudy() {
               </div>
             </motion.div>
             <div className="grid grid-cols-1 gap-6">
-              <Figure src={p39.url} alt="3D jewellery render" ratio="aspect-[4/5]" />
-              <Figure src={p44.url} alt="AR try-on context" ratio="aspect-[4/5]" />
+              <Figure src={arTryon.url} alt="Jewellery AR Try-On — Lens Studio camera filter" ratio="aspect-[4/5]" />
+              <Figure src={necklace3d.url} alt="3D jewellery visualization render" ratio="aspect-[4/5]" />
             </div>
           </div>
         </div>
