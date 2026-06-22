@@ -23,7 +23,11 @@ import p41 from "@/assets/hradhe/ip1.jpg.asset.json";
 import p42 from "@/assets/hradhe/ip8.jpg.asset.json";
 import p44 from "@/assets/hradhe/ip16.jpg.asset.json";
 import p45 from "@/assets/hradhe/p45.jpg.asset.json";
-import websiteVideo from "@/assets/hradhe/website.mp4.asset.json";
+import websiteVideo from "@/assets/hradhe/website-showcase.webm.asset.json";
+import websitePoster from "@/assets/hradhe/website-poster.jpg.asset.json";
+import arTryon from "@/assets/hradhe/ar-tryon.png.asset.json";
+import necklace3d from "@/assets/hradhe/necklace-3d.png.asset.json";
+import packagingSet from "@/assets/hradhe/packaging-set.png.asset.json";
 
 export const Route = createFileRoute("/projects/h-radhe")({
   head: () => ({
@@ -355,14 +359,16 @@ function HRadheCaseStudy() {
             <Figure src={p45.url} alt="Website key screen" ratio="aspect-[4/5]" />
           </div>
           <motion.figure {...fade} className="space-y-3">
-            <div className="overflow-hidden rounded-xl border border-white/10 bg-[#0a0a1f] aspect-[16/10] group">
+            <div className="group rounded-xl overflow-hidden bg-[#f5efe4] p-4 sm:p-8 flex items-center justify-center shadow-[0_20px_60px_-30px_rgba(0,0,0,0.6)] transition-all duration-[350ms] ease-out hover:scale-[1.015] hover:shadow-[0_30px_80px_-30px_rgba(0,0,0,0.75)]">
               <video
                 src={websiteVideo.url}
-                autoPlay
+                poster={websitePoster.url}
+                controls
                 muted
-                loop
                 playsInline
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                preload="metadata"
+                style={{ objectFit: "contain", objectPosition: "center", borderRadius: "inherit" }}
+                className="w-full h-auto max-w-full"
               />
             </div>
             <figcaption className="text-xs text-foreground/50">Website — final design</figcaption>
@@ -403,8 +409,8 @@ function HRadheCaseStudy() {
               </div>
             </motion.div>
             <div className="grid grid-cols-1 gap-6">
-              <Figure src={p39.url} alt="3D jewellery render" ratio="aspect-[4/5]" />
-              <Figure src={p44.url} alt="AR try-on context" ratio="aspect-[4/5]" />
+              <Figure src={arTryon.url} alt="Jewellery AR Try-On — Lens Studio camera filter" ratio="aspect-[4/5]" />
+              <Figure src={necklace3d.url} alt="3D jewellery visualization render" ratio="aspect-[4/5]" />
             </div>
           </div>
         </div>
@@ -430,7 +436,7 @@ function HRadheCaseStudy() {
                 ))}
               </div>
             </motion.div>
-            <Figure src={p41.url} alt="Packaging visual" ratio="aspect-[4/5]" />
+            <Figure src={packagingSet.url} alt="Complete packaging & stationery system" ratio="aspect-[4/5]" />
           </div>
         </div>
       </section>
