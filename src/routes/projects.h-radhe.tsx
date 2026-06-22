@@ -454,7 +454,7 @@ function HRadheCaseStudy() {
         <div className="mx-auto max-w-7xl">
           <SectionLabel n="11">Gallery</SectionLabel>
           <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 [&>*]:mb-4">
-            {[p22, p32, p34, p33, p35, p39, p40, p36, p37, p41, p42, p44, p45, p46].map((img, i) => (
+            {[p22, p32, p34, p33, p35, p39, p40, p36, p37, p41, p42, p44, p45].map((img, i) => (
               <motion.img
                 key={i}
                 src={img.url}
