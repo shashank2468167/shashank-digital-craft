@@ -14,17 +14,16 @@ import p31 from "@/assets/hradhe/u75.jpg.asset.json";
 import p32 from "@/assets/hradhe/u49.jpg.asset.json";
 import p33 from "@/assets/hradhe/u50.jpg.asset.json";
 import p34 from "@/assets/hradhe/group42.png.asset.json";
-import p35 from "@/assets/hradhe/p35.jpg.asset.json";
-import p36 from "@/assets/hradhe/p36.jpg.asset.json";
-import p37 from "@/assets/hradhe/p37.jpg.asset.json";
-import p38 from "@/assets/hradhe/p38.jpg.asset.json";
-import p39 from "@/assets/hradhe/p39.jpg.asset.json";
-import p40 from "@/assets/hradhe/p40.jpg.asset.json";
-import p41 from "@/assets/hradhe/p41.jpg.asset.json";
-import p42 from "@/assets/hradhe/p42.jpg.asset.json";
-import p44 from "@/assets/hradhe/p44.jpg.asset.json";
+import p35 from "@/assets/hradhe/n74.jpg.asset.json";
+import p36 from "@/assets/hradhe/n42.jpg.asset.json";
+import p37 from "@/assets/hradhe/n59.jpg.asset.json";
+import p39 from "@/assets/hradhe/ip3.jpg.asset.json";
+import p40 from "@/assets/hradhe/n47.jpg.asset.json";
+import p41 from "@/assets/hradhe/ip1.jpg.asset.json";
+import p42 from "@/assets/hradhe/ip8.jpg.asset.json";
+import p44 from "@/assets/hradhe/ip16.jpg.asset.json";
 import p45 from "@/assets/hradhe/p45.jpg.asset.json";
-import p46 from "@/assets/hradhe/p46.jpg.asset.json";
+import websiteVideo from "@/assets/hradhe/website.mp4.asset.json";
 
 export const Route = createFileRoute("/projects/h-radhe")({
   head: () => ({
