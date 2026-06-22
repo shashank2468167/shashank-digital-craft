@@ -305,7 +305,12 @@ function HRadheCaseStudy() {
           </div>
 
           <div className="mt-6">
-            <Figure src={p34.url} alt="Instagram 3x3 grid system" caption="Grid system — alternating product, model and storytelling posts" ratio="aspect-[16/10]" />
+            <motion.figure {...fade} className="space-y-3">
+              <div className="overflow-hidden rounded-xl border border-white/10 bg-[#FFF9EA] p-4 sm:p-6 aspect-[16/10] flex items-center justify-center">
+                <img src={p34.url} alt="Instagram 3x3 grid system" loading="lazy" className="w-full h-full object-contain" />
+              </div>
+              <figcaption className="text-xs text-foreground/50">Grid system — alternating product, model and storytelling posts</figcaption>
+            </motion.figure>
           </div>
 
           <div className="mt-12">
