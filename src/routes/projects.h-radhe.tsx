@@ -14,17 +14,16 @@ import p31 from "@/assets/hradhe/u75.jpg.asset.json";
 import p32 from "@/assets/hradhe/u49.jpg.asset.json";
 import p33 from "@/assets/hradhe/u50.jpg.asset.json";
 import p34 from "@/assets/hradhe/group42.png.asset.json";
-import p35 from "@/assets/hradhe/p35.jpg.asset.json";
-import p36 from "@/assets/hradhe/p36.jpg.asset.json";
-import p37 from "@/assets/hradhe/p37.jpg.asset.json";
-import p38 from "@/assets/hradhe/p38.jpg.asset.json";
-import p39 from "@/assets/hradhe/p39.jpg.asset.json";
-import p40 from "@/assets/hradhe/p40.jpg.asset.json";
-import p41 from "@/assets/hradhe/p41.jpg.asset.json";
-import p42 from "@/assets/hradhe/p42.jpg.asset.json";
-import p44 from "@/assets/hradhe/p44.jpg.asset.json";
+import p35 from "@/assets/hradhe/n74.jpg.asset.json";
+import p36 from "@/assets/hradhe/n42.jpg.asset.json";
+import p37 from "@/assets/hradhe/n59.jpg.asset.json";
+import p39 from "@/assets/hradhe/ip3.jpg.asset.json";
+import p40 from "@/assets/hradhe/n47.jpg.asset.json";
+import p41 from "@/assets/hradhe/ip1.jpg.asset.json";
+import p42 from "@/assets/hradhe/ip8.jpg.asset.json";
+import p44 from "@/assets/hradhe/ip16.jpg.asset.json";
 import p45 from "@/assets/hradhe/p45.jpg.asset.json";
-import p46 from "@/assets/hradhe/p46.jpg.asset.json";
+import websiteVideo from "@/assets/hradhe/website.mp4.asset.json";
 
 export const Route = createFileRoute("/projects/h-radhe")({
   head: () => ({
@@ -355,7 +354,19 @@ function HRadheCaseStudy() {
             </motion.div>
             <Figure src={p45.url} alt="Website key screen" ratio="aspect-[4/5]" />
           </div>
-          <Figure src={p46.url} alt="Website — final design" caption="Website — final design" ratio="aspect-[16/10]" />
+          <motion.figure {...fade} className="space-y-3">
+            <div className="overflow-hidden rounded-xl border border-white/10 bg-[#0a0a1f] aspect-[16/10] group">
+              <video
+                src={websiteVideo.url}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+              />
+            </div>
+            <figcaption className="text-xs text-foreground/50">Website — final design</figcaption>
+          </motion.figure>
         </div>
       </section>
 
@@ -392,7 +403,7 @@ function HRadheCaseStudy() {
               </div>
             </motion.div>
             <div className="grid grid-cols-1 gap-6">
-              <Figure src={p38.url} alt="3D jewellery render" ratio="aspect-[4/5]" />
+              <Figure src={p39.url} alt="3D jewellery render" ratio="aspect-[4/5]" />
               <Figure src={p44.url} alt="AR try-on context" ratio="aspect-[4/5]" />
             </div>
           </div>
@@ -443,7 +454,7 @@ function HRadheCaseStudy() {
         <div className="mx-auto max-w-7xl">
           <SectionLabel n="11">Gallery</SectionLabel>
           <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 [&>*]:mb-4">
-            {[p22, p32, p34, p33, p35, p39, p40, p36, p37, p41, p42, p44, p45, p46].map((img, i) => (
+            {[p22, p32, p34, p33, p35, p39, p40, p36, p37, p41, p42, p44, p45].map((img, i) => (
               <motion.img
                 key={i}
                 src={img.url}
