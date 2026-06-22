@@ -256,9 +256,9 @@ function HRadheCaseStudy() {
         <div className="mx-auto max-w-6xl">
           <SectionLabel n="05">Visual identity system</SectionLabel>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Figure src={p30.url} alt="Colour palette" caption="Primary & secondary palette" />
-            <Figure src={p31.url} alt="Typography system" caption="Typography — Cormorant Garamond, Helvetica" />
-            <Figure src={p29.url} alt="Language rules" caption="Language rules" />
+            <Figure src={p30.url} alt="Cabochon Emerald" caption="Gemstone Language" />
+            <Figure src={p31.url} alt="Kundan Setting" caption="Craft Technique" />
+            <Figure src={p29.url} alt="Pearl Latkan" caption="Signature Detail" />
           </div>
 
           {/* Colour swatches */}
