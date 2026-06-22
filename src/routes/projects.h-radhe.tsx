@@ -354,7 +354,19 @@ function HRadheCaseStudy() {
             </motion.div>
             <Figure src={p45.url} alt="Website key screen" ratio="aspect-[4/5]" />
           </div>
-          <Figure src={p46.url} alt="Website — final design" caption="Website — final design" ratio="aspect-[16/10]" />
+          <motion.figure {...fade} className="space-y-3">
+            <div className="overflow-hidden rounded-xl border border-white/10 bg-[#0a0a1f] aspect-[16/10] group">
+              <video
+                src={websiteVideo.url}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+              />
+            </div>
+            <figcaption className="text-xs text-foreground/50">Website — final design</figcaption>
+          </motion.figure>
         </div>
       </section>
 
