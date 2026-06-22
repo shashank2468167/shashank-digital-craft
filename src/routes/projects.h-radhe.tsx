@@ -245,11 +245,8 @@ function HRadheCaseStudy() {
             </p>
           </motion.div>
           <div className="grid md:grid-cols-2 gap-6">
-            <Figure src={p26.url} alt="Logo evolution — previous vs current" caption="Logo evolution" />
-            <Figure src={p27.url} alt="About the logo — naming hierarchy" caption="Naming hierarchy" />
-          </div>
-          <div className="mt-6">
-            <Figure src={p28.url} alt="Logo usage and clear space rules" caption="Logo usage, grid, colour variants & clear space" ratio="aspect-[16/10]" />
+            <Figure src={p26.url} alt="Previous Logo" caption="Previous Logo" />
+            <Figure src={p27.url} alt="Current Logo" caption="Current Logo" />
           </div>
         </div>
       </section>
