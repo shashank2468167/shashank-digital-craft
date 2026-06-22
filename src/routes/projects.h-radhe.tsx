@@ -3,18 +3,17 @@ import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 
 
-import p22 from "@/assets/hradhe/p60.png.asset.json";
+import p22 from "@/assets/hradhe/u57.jpg.asset.json";
 import p23 from "@/assets/hradhe/p60.png.asset.json";
-import p24 from "@/assets/hradhe/p24.jpg.asset.json";
-import p26 from "@/assets/hradhe/p26.jpg.asset.json";
-import p27 from "@/assets/hradhe/p27.jpg.asset.json";
-import p29 from "@/assets/hradhe/p29.jpg.asset.json";
-import p28 from "@/assets/hradhe/p28.jpg.asset.json";
-import p30 from "@/assets/hradhe/p30.jpg.asset.json";
-import p31 from "@/assets/hradhe/p31.jpg.asset.json";
-import p32 from "@/assets/hradhe/p32.jpg.asset.json";
-import p33 from "@/assets/hradhe/p33.jpg.asset.json";
-import p34 from "@/assets/hradhe/p34.jpg.asset.json";
+import p24 from "@/assets/hradhe/u73.jpg.asset.json";
+import p26 from "@/assets/hradhe/logo-prev.jpg.asset.json";
+import p27 from "@/assets/hradhe/logo-curr.jpg.asset.json";
+import p29 from "@/assets/hradhe/u55.jpg.asset.json";
+import p30 from "@/assets/hradhe/u56.jpg.asset.json";
+import p31 from "@/assets/hradhe/u75.jpg.asset.json";
+import p32 from "@/assets/hradhe/u49.jpg.asset.json";
+import p33 from "@/assets/hradhe/u50.jpg.asset.json";
+import p34 from "@/assets/hradhe/group42.png.asset.json";
 import p35 from "@/assets/hradhe/p35.jpg.asset.json";
 import p36 from "@/assets/hradhe/p36.jpg.asset.json";
 import p37 from "@/assets/hradhe/p37.jpg.asset.json";
