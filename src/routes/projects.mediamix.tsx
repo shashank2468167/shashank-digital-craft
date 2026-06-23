@@ -36,7 +36,7 @@ export const Route = createFileRoute("/projects/mediamix")({
         content:
           "11 weeks of brand work, social design, reels and marketing assets for seven clients at MEDIAMIX Gurgaon.",
       },
-      { property: "og:image", content: p11.url },
+      { property: "og:image", content: mmClients.url },
     ],
   }),
   component: MediaMixCaseStudy,
@@ -217,7 +217,7 @@ function MediaMixCaseStudy() {
 
           {/* HERO IMAGE — clients */}
           <div className="mt-14">
-            <Figure src={p7.url} alt="MEDIAMIX clients — iVoltaa, PIR, Silverglades, Saan Verdanté, Wheel of Wellness, Roslyn Coffee" ratio="aspect-[16/10]" caption="Seven clients · eleven weeks · one design pipeline." />
+            <Figure src={mmClients.url} alt="MEDIAMIX clients — iVoltaa, Silverglades, Wheel of Wellness, PIR Brand, Roslyn Coffee, Saan Verdanté" ratio="aspect-[16/10]" caption="Internship Overview" />
           </div>
         </div>
       </section>
