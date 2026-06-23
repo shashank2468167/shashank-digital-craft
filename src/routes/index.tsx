@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import heroImg from "@/assets/hero-illustration.png";
 import profileAsset from "@/assets/profile.png.asset.json";
+import resumeAsset from "@/assets/resume.png.asset.json";
 const profileImg = profileAsset.url;
 
 const ROLES = ["Graphic Designer", "3D Artist", "Brand Designer", "UI/UX Designer", "Visual Designer"];
@@ -124,7 +125,7 @@ function Hero() {
             <TypewriterRole />
           </h1>
           <div className="mt-10 flex flex-wrap gap-4">
-            <a href="#" className="btn-outline">Download Resume</a>
+            <a href={resumeAsset.url} download="Shashank_Kumar_Resume.png" className="btn-outline">Download Resume</a>
             <a href="#projects" className="btn-outline">View Portfolio</a>
           </div>
 
