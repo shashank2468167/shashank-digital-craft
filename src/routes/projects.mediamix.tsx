@@ -2,19 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 
-import p7 from "@/assets/mediamix/mm_page_7.jpg.asset.json";
 import p9 from "@/assets/mediamix/mm_page_9.jpg.asset.json";
-import p11 from "@/assets/mediamix/mm_page_11.jpg.asset.json";
-import p12 from "@/assets/mediamix/mm_page_12.jpg.asset.json";
-import p13 from "@/assets/mediamix/mm_page_13.jpg.asset.json";
-import p14 from "@/assets/mediamix/mm_page_14.jpg.asset.json";
-import p15 from "@/assets/mediamix/mm_page_15.jpg.asset.json";
-import p17 from "@/assets/mediamix/mm_page_17.jpg.asset.json";
-import p18 from "@/assets/mediamix/mm_page_18.jpg.asset.json";
-import p19 from "@/assets/mediamix/mm_page_19.jpg.asset.json";
-import p21 from "@/assets/mediamix/mm_page_21.jpg.asset.json";
-import p22 from "@/assets/mediamix/mm_page_22.jpg.asset.json";
-import p23 from "@/assets/mediamix/mm_page_23.jpg.asset.json";
 import p25 from "@/assets/mediamix/mm_page_25.jpg.asset.json";
 import p27 from "@/assets/mediamix/mm_page_27.jpg.asset.json";
 import p28 from "@/assets/mediamix/mm_page_28.jpg.asset.json";
@@ -25,6 +13,13 @@ import p33 from "@/assets/mediamix/mm_page_33.jpg.asset.json";
 import p35 from "@/assets/mediamix/mm_page_35.jpg.asset.json";
 import p37 from "@/assets/mediamix/mm_page_37.jpg.asset.json";
 import p38 from "@/assets/mediamix/mm_page_38.jpg.asset.json";
+import mmClients from "@/assets/mediamix/mm_clients_grid.png.asset.json";
+import mmIvoltaaBrand from "@/assets/mediamix/mm_ivoltaa_brand.png.asset.json";
+import mmFestivals from "@/assets/mediamix/mm_festivals.png.asset.json";
+import mm100w from "@/assets/mediamix/mm_100w.png.asset.json";
+import mmIgnite from "@/assets/mediamix/mm_ignite.png.asset.json";
+import mmReelConnected from "@/assets/mediamix/mm_reel_connected.png.asset.json";
+import mmPirCarousel from "@/assets/mediamix/mm_pir_carousel.png.asset.json";
 
 export const Route = createFileRoute("/projects/mediamix")({
   head: () => ({
