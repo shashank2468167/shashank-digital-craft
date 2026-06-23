@@ -255,6 +255,59 @@ function LastNightCaseStudy() {
         </div>
       </section>
 
+      {/* THE STORY — cinematic showcase */}
+      <section className="px-4 sm:px-8 py-24">
+        <div className="mx-auto max-w-6xl">
+          <SectionLabel n="01">The Story</SectionLabel>
+          <motion.div
+            {...fade}
+            className="relative overflow-hidden rounded-xl border border-white/10"
+          >
+            {/* Background image */}
+            <img
+              src={tlnStoryHero.url}
+              alt="The Last Night — cinematic story showcase"
+              loading="lazy"
+              className="w-full h-auto object-cover"
+              width={1792}
+              height={1024}
+            />
+            {/* Vignette overlay */}
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                boxShadow: "inset 0 0 180px 60px rgba(0,0,0,0.65)",
+              }}
+            />
+            {/* Radial vignette for extra depth */}
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                background:
+                  "radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.55) 100%)",
+              }}
+            />
+            {/* Text overlay */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 sm:px-12">
+              <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-white drop-shadow-[0_4px_24px_rgba(0,0,0,0.9)] mb-6">
+                THE STORY
+              </h2>
+              <div className="max-w-2xl space-y-4">
+                <p className="text-sm sm:text-base lg:text-lg text-white/95 leading-relaxed drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
+                  <strong className="font-semibold">"THE LAST NIGHT"</strong> is a survival-horror story-driven game built in Unreal Engine 5.
+                </p>
+                <p className="text-sm sm:text-base lg:text-lg text-white/85 leading-relaxed drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
+                  The game follows a young girl trapped inside a zombie-infested house, where survival depends on courage, strategy, and smart inventory management.
+                </p>
+                <p className="text-sm sm:text-base lg:text-lg text-white/85 leading-relaxed drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
+                  Starting from the basement — the only safe room — she must fight through hordes of zombies, collect keys, solve environmental challenges, and uncover a path to escape.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* OVERVIEW */}
       <section className="px-4 sm:px-8 py-24">
         <div className="mx-auto max-w-6xl">
