@@ -13,6 +13,7 @@ import tlnHallway from "@/assets/lastnight/tln_hallway.png.asset.json";
 import tlnStaircase from "@/assets/lastnight/tln_staircase.png.asset.json";
 import tlnCreature from "@/assets/lastnight/tln_creature.png.asset.json";
 import tlnStairsOverhead from "@/assets/lastnight/tln_stairs_overhead.png.asset.json";
+import tlnStoryHero from "@/assets/lastnight/tln_story_hero.png.asset.json";
 
 const ln01 = tlnHero;
 const ln02 = tlnPortrait;
@@ -254,10 +255,63 @@ function LastNightCaseStudy() {
         </div>
       </section>
 
+      {/* THE STORY — cinematic showcase */}
+      <section className="px-4 sm:px-8 py-24">
+        <div className="mx-auto max-w-6xl">
+          <SectionLabel n="01">The Story</SectionLabel>
+          <motion.div
+            {...fade}
+            className="relative overflow-hidden rounded-xl border border-white/10"
+          >
+            {/* Background image */}
+            <img
+              src={tlnStoryHero.url}
+              alt="The Last Night — cinematic story showcase"
+              loading="lazy"
+              className="w-full h-auto object-cover"
+              width={1792}
+              height={1024}
+            />
+            {/* Vignette overlay */}
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                boxShadow: "inset 0 0 180px 60px rgba(0,0,0,0.65)",
+              }}
+            />
+            {/* Radial vignette for extra depth */}
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                background:
+                  "radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.55) 100%)",
+              }}
+            />
+            {/* Text overlay */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 sm:px-12">
+              <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-white drop-shadow-[0_4px_24px_rgba(0,0,0,0.9)] mb-6">
+                THE STORY
+              </h2>
+              <div className="max-w-2xl space-y-4">
+                <p className="text-sm sm:text-base lg:text-lg text-white/95 leading-relaxed drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
+                  <strong className="font-semibold">"THE LAST NIGHT"</strong> is a survival-horror story-driven game built in Unreal Engine 5.
+                </p>
+                <p className="text-sm sm:text-base lg:text-lg text-white/85 leading-relaxed drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
+                  The game follows a young girl trapped inside a zombie-infested house, where survival depends on courage, strategy, and smart inventory management.
+                </p>
+                <p className="text-sm sm:text-base lg:text-lg text-white/85 leading-relaxed drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
+                  Starting from the basement — the only safe room — she must fight through hordes of zombies, collect keys, solve environmental challenges, and uncover a path to escape.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* OVERVIEW */}
       <section className="px-4 sm:px-8 py-24">
         <div className="mx-auto max-w-6xl">
-          <SectionLabel n="01">Project Overview</SectionLabel>
+          <SectionLabel n="02">Project Overview</SectionLabel>
           <div className="grid lg:grid-cols-[1.1fr_1fr] gap-12 items-start">
             <motion.div {...fade} className="space-y-6">
               <h2 className="font-display text-3xl sm:text-5xl leading-[1.1] font-semibold">
@@ -284,7 +338,7 @@ function LastNightCaseStudy() {
       {/* CHALLENGE */}
       <section className="px-4 sm:px-8 py-24 bg-white/[0.02] border-y border-white/5">
         <div className="mx-auto max-w-6xl">
-          <SectionLabel n="02">The Challenge</SectionLabel>
+          <SectionLabel n="03">The Challenge</SectionLabel>
           <motion.h2
             {...fade}
             className="font-display text-3xl sm:text-4xl leading-tight font-semibold mb-12 max-w-3xl"
@@ -309,7 +363,7 @@ function LastNightCaseStudy() {
       {/* ENVIRONMENT DESIGN */}
       <section className="px-4 sm:px-8 py-24">
         <div className="mx-auto max-w-6xl">
-          <SectionLabel n="03">Environment Design</SectionLabel>
+          <SectionLabel n="04">Environment Design</SectionLabel>
           <div className="grid lg:grid-cols-2 gap-12 items-start mb-10">
             <motion.div {...fade}>
               <h2 className="font-display text-3xl sm:text-4xl leading-tight font-semibold mb-6">
@@ -353,7 +407,7 @@ function LastNightCaseStudy() {
       {/* WORLD BUILDING — full bleed */}
       <section className="relative px-4 sm:px-8 py-24 bg-white/[0.02] border-y border-white/5">
         <div className="mx-auto max-w-7xl">
-          <SectionLabel n="04">World Building</SectionLabel>
+          <SectionLabel n="05">World Building</SectionLabel>
           <motion.h2 {...fade} className="font-display text-3xl sm:text-4xl leading-tight font-semibold mb-12 max-w-3xl">
             The room is one frame of a much larger story — the rest lives off-screen.
           </motion.h2>
@@ -368,7 +422,7 @@ function LastNightCaseStudy() {
       {/* LIGHTING & MOOD */}
       <section className="px-4 sm:px-8 py-24">
         <div className="mx-auto max-w-6xl">
-          <SectionLabel n="05">Lighting & Mood Development</SectionLabel>
+          <SectionLabel n="06">Lighting & Mood Development</SectionLabel>
           <div className="grid lg:grid-cols-[1fr_1.1fr] gap-12 items-start mb-10">
             <Figure src={ln09.url} alt="Lighting study render" ratio="aspect-[4/5]" />
             <motion.div {...fade}>
@@ -412,7 +466,7 @@ function LastNightCaseStudy() {
       {/* UE5 WORKFLOW */}
       <section className="px-4 sm:px-8 py-24 bg-white/[0.02] border-y border-white/5">
         <div className="mx-auto max-w-6xl">
-          <SectionLabel n="06">Unreal Engine 5 Workflow</SectionLabel>
+          <SectionLabel n="07">Unreal Engine 5 Workflow</SectionLabel>
           <motion.h2 {...fade} className="font-display text-3xl sm:text-4xl leading-tight font-semibold mb-12">
             An eight-step pipeline from blockout to final grade.
           </motion.h2>
@@ -444,7 +498,7 @@ function LastNightCaseStudy() {
       {/* MOTION GIF showcase */}
       <section className="px-4 sm:px-8 py-24">
         <div className="mx-auto max-w-6xl">
-          <SectionLabel n="07">Motion Study</SectionLabel>
+          <SectionLabel n="08">Motion Study</SectionLabel>
           <motion.h2 {...fade} className="font-display text-3xl sm:text-4xl leading-tight font-semibold mb-10 max-w-3xl">
             A slow camera, a held breath, a single moving light.
           </motion.h2>
@@ -455,7 +509,7 @@ function LastNightCaseStudy() {
       {/* TOOLS */}
       <section className="px-4 sm:px-8 py-24 bg-white/[0.02] border-y border-white/5">
         <div className="mx-auto max-w-6xl">
-          <SectionLabel n="08">Tools Used</SectionLabel>
+          <SectionLabel n="09">Tools Used</SectionLabel>
           <div className="grid sm:grid-cols-2 gap-5">
             {tools.map((t) => (
               <motion.div
@@ -474,7 +528,7 @@ function LastNightCaseStudy() {
       {/* GALLERY */}
       <section className="px-4 sm:px-8 py-24">
         <div className="mx-auto max-w-7xl">
-          <SectionLabel n="09">Gallery</SectionLabel>
+          <SectionLabel n="10">Gallery</SectionLabel>
           <motion.h2 {...fade} className="font-display text-3xl sm:text-4xl leading-tight font-semibold mb-12">
             Frames from the last night.
           </motion.h2>
@@ -489,7 +543,7 @@ function LastNightCaseStudy() {
       {/* FINAL OUTCOME */}
       <section className="px-4 sm:px-8 py-24 bg-white/[0.02] border-y border-white/5">
         <div className="mx-auto max-w-6xl">
-          <SectionLabel n="10">Final Outcome</SectionLabel>
+          <SectionLabel n="11">Final Outcome</SectionLabel>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div {...fade}>
               <h2 className="font-display text-3xl sm:text-5xl leading-[1.05] font-semibold mb-6">
@@ -519,7 +573,7 @@ function LastNightCaseStudy() {
       {/* LEARNINGS */}
       <section className="px-4 sm:px-8 py-24">
         <div className="mx-auto max-w-6xl">
-          <SectionLabel n="11">Key Learnings</SectionLabel>
+          <SectionLabel n="12">Key Learnings</SectionLabel>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {learnings.map((l, i) => (
               <motion.div
