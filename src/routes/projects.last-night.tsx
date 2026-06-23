@@ -2,17 +2,27 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 
-import ln01 from "@/assets/lastnight/ln01.webp.asset.json";
-import ln02 from "@/assets/lastnight/ln02.webp.asset.json";
-import ln03 from "@/assets/lastnight/ln03.webp.asset.json";
 import ln04 from "@/assets/lastnight/ln04.gif.asset.json";
-import ln05 from "@/assets/lastnight/ln05.webp.asset.json";
-import ln06 from "@/assets/lastnight/ln06.webp.asset.json";
-import ln07 from "@/assets/lastnight/ln07.webp.asset.json";
-import ln08 from "@/assets/lastnight/ln08.webp.asset.json";
 import ln09 from "@/assets/lastnight/ln09.webp.asset.json";
-import ln10 from "@/assets/lastnight/ln10.webp.asset.json";
-import ln11 from "@/assets/lastnight/ln11.webp.asset.json";
+import tlnHero from "@/assets/lastnight/tln_hero.png.asset.json";
+import tlnPortrait from "@/assets/lastnight/tln_portrait.png.asset.json";
+import tlnCorridor from "@/assets/lastnight/tln_corridor.png.asset.json";
+import tlnDeskRevolver from "@/assets/lastnight/tln_desk_revolver.png.asset.json";
+import tlnTopdown from "@/assets/lastnight/tln_topdown.png.asset.json";
+import tlnHallway from "@/assets/lastnight/tln_hallway.png.asset.json";
+import tlnStaircase from "@/assets/lastnight/tln_staircase.png.asset.json";
+import tlnCreature from "@/assets/lastnight/tln_creature.png.asset.json";
+import tlnStairsOverhead from "@/assets/lastnight/tln_stairs_overhead.png.asset.json";
+
+const ln01 = tlnHero;
+const ln02 = tlnPortrait;
+const ln03 = tlnCorridor;
+const ln05 = tlnDeskRevolver;
+const ln06 = tlnTopdown;
+const ln07 = tlnHallway;
+const ln08 = tlnStaircase;
+const ln10 = tlnCreature;
+const ln11 = tlnStairsOverhead;
 
 export const Route = createFileRoute("/projects/last-night")({
   head: () => ({
