@@ -13,6 +13,7 @@ import tlnHallway from "@/assets/lastnight/tln_hallway.png.asset.json";
 import tlnStaircase from "@/assets/lastnight/tln_staircase.png.asset.json";
 import tlnCreature from "@/assets/lastnight/tln_creature.png.asset.json";
 import tlnStairsOverhead from "@/assets/lastnight/tln_stairs_overhead.png.asset.json";
+import tlnStoryHero from "@/assets/lastnight/tln_story_hero.png.asset.json";
 
 const ln01 = tlnHero;
 const ln02 = tlnPortrait;
