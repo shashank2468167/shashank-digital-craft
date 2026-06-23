@@ -422,7 +422,7 @@ function LastNightCaseStudy() {
       {/* LIGHTING & MOOD */}
       <section className="px-4 sm:px-8 py-24">
         <div className="mx-auto max-w-6xl">
-          <SectionLabel n="06">Lighting <SectionLabel n="05">Lighting & Mood Development</SectionLabel> Mood Development</SectionLabel>
+          <SectionLabel n="06">Lighting & Mood Development</SectionLabel>
           <div className="grid lg:grid-cols-[1fr_1.1fr] gap-12 items-start mb-10">
             <Figure src={ln09.url} alt="Lighting study render" ratio="aspect-[4/5]" />
             <motion.div {...fade}>
