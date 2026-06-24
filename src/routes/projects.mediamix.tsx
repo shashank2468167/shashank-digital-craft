@@ -9,12 +9,16 @@ import p12 from "@/assets/mediamix/mm_ivoltaa_festival.png.asset.json";
 import p13 from "@/assets/mediamix/mm_ivoltaa_100w.png.asset.json";
 import p14 from "@/assets/mediamix/mm_ivoltaa_sound.png.asset.json";
 import p15 from "@/assets/mediamix/mm_ivoltaa_reel.png.asset.json";
-import p17 from "@/assets/mediamix/mm_pir_carousel.png.asset.json";
+import pirSocial from "@/assets/mediamix/mm_pir_social.png.asset.json";
+import pirCanopy from "@/assets/mediamix/mm_pir_canopy.png.asset.json";
+import pirCard from "@/assets/mediamix/mm_pir_card.png.asset.json";
 import p25 from "@/assets/mediamix/mm_page_25.jpg.asset.json";
-import p27 from "@/assets/mediamix/mm_page_27.jpg.asset.json";
-import p31 from "@/assets/mediamix/mm_page_31.jpg.asset.json";
+import saanGrid from "@/assets/mediamix/mm_saan_grid.png.asset.json";
+import fsProfile from "@/assets/mediamix/mm_fs_profile.png.asset.json";
+import fsReels1 from "@/assets/mediamix/mm_fs_reels1.png.asset.json";
+import fsReels2 from "@/assets/mediamix/mm_fs_reels2.png.asset.json";
 import p35 from "@/assets/mediamix/mm_page_35.jpg.asset.json";
-import p37 from "@/assets/mediamix/mm_page_37.jpg.asset.json";
+import wowBrochure from "@/assets/mediamix/mm_wow_brochure.png.asset.json";
 
 export const Route = createFileRoute("/projects/mediamix")({
   head: () => ({
