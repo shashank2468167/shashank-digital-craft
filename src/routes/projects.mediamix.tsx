@@ -458,7 +458,7 @@ function MediaMixCaseStudy() {
       {/* DESIGN PROCESS */}
       <section className="px-4 sm:px-8 py-24 bg-white/[0.02] border-y border-white/5">
         <div className="mx-auto max-w-6xl">
-          <SectionLabel n="10">Design Process</SectionLabel>
+          <SectionLabel n="12">Design Process</SectionLabel>
           <motion.h2 {...fade} className="font-display text-3xl sm:text-4xl leading-tight font-semibold mb-12">
             Brief to delivery, every week, every client.
           </motion.h2>
@@ -481,7 +481,7 @@ function MediaMixCaseStudy() {
       {/* TOOLS */}
       <section className="px-4 sm:px-8 py-24">
         <div className="mx-auto max-w-6xl">
-          <SectionLabel n="11">Tools Used</SectionLabel>
+          <SectionLabel n="13">Tools Used</SectionLabel>
           <div className="grid sm:grid-cols-3 gap-5">
             {tools.map((t) => (
               <motion.div
@@ -500,7 +500,7 @@ function MediaMixCaseStudy() {
       {/* LEARNINGS */}
       <section className="px-4 sm:px-8 py-24 bg-white/[0.02] border-y border-white/5">
         <div className="mx-auto max-w-6xl">
-          <SectionLabel n="12">Key Learnings &amp; Growth</SectionLabel>
+          <SectionLabel n="14">Key Learnings &amp; Growth</SectionLabel>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {learnings.map((l, i) => (
               <motion.div
@@ -519,7 +519,7 @@ function MediaMixCaseStudy() {
       {/* FINAL OUTCOME */}
       <section className="px-4 sm:px-8 py-24">
         <div className="mx-auto max-w-6xl">
-          <SectionLabel n="13">Final Outcome</SectionLabel>
+          <SectionLabel n="15">Final Outcome</SectionLabel>
           <motion.div {...fade} className="max-w-3xl">
             <h2 className="font-display text-3xl sm:text-5xl leading-[1.05] font-semibold mb-6">
               Eleven weeks. Seven clients. <span className="text-accent-purple italic font-light">One sharper designer.</span>
