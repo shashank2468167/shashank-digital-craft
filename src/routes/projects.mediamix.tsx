@@ -8,7 +8,7 @@ import p11 from "@/assets/mediamix/mm_ivoltaa_hero.png.asset.json";
 import p12 from "@/assets/mediamix/mm_ivoltaa_festival.png.asset.json";
 import p13 from "@/assets/mediamix/mm_ivoltaa_100w.png.asset.json";
 import p14 from "@/assets/mediamix/mm_ivoltaa_sound.png.asset.json";
-import p15 from "@/assets/mediamix/mm_ivoltaa_reel.png.asset.json";
+import p15 from "@/assets/mediamix/mm_ivoltaa_reel_new.png.asset.json";
 import pirSocial from "@/assets/mediamix/mm_pir_social.png.asset.json";
 import pirCanopy from "@/assets/mediamix/mm_pir_canopy.png.asset.json";
 import pirCard from "@/assets/mediamix/mm_pir_card.png.asset.json";
