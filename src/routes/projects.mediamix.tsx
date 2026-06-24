@@ -10,18 +10,11 @@ import p13 from "@/assets/mediamix/mm_ivoltaa_100w.png.asset.json";
 import p14 from "@/assets/mediamix/mm_ivoltaa_sound.png.asset.json";
 import p15 from "@/assets/mediamix/mm_ivoltaa_reel.png.asset.json";
 import p17 from "@/assets/mediamix/mm_pir_carousel.png.asset.json";
-import p22 from "@/assets/mediamix/mm_page_22.jpg.asset.json";
-import p23 from "@/assets/mediamix/mm_page_23.jpg.asset.json";
 import p25 from "@/assets/mediamix/mm_page_25.jpg.asset.json";
 import p27 from "@/assets/mediamix/mm_page_27.jpg.asset.json";
-import p28 from "@/assets/mediamix/mm_page_28.jpg.asset.json";
-import p29 from "@/assets/mediamix/mm_page_29.jpg.asset.json";
 import p31 from "@/assets/mediamix/mm_page_31.jpg.asset.json";
-import p32 from "@/assets/mediamix/mm_page_32.jpg.asset.json";
-import p33 from "@/assets/mediamix/mm_page_33.jpg.asset.json";
 import p35 from "@/assets/mediamix/mm_page_35.jpg.asset.json";
 import p37 from "@/assets/mediamix/mm_page_37.jpg.asset.json";
-import p38 from "@/assets/mediamix/mm_page_38.jpg.asset.json";
 
 export const Route = createFileRoute("/projects/mediamix")({
   head: () => ({
