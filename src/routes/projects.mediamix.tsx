@@ -9,12 +9,16 @@ import p12 from "@/assets/mediamix/mm_ivoltaa_festival.png.asset.json";
 import p13 from "@/assets/mediamix/mm_ivoltaa_100w.png.asset.json";
 import p14 from "@/assets/mediamix/mm_ivoltaa_sound.png.asset.json";
 import p15 from "@/assets/mediamix/mm_ivoltaa_reel.png.asset.json";
-import p17 from "@/assets/mediamix/mm_pir_carousel.png.asset.json";
+import pirSocial from "@/assets/mediamix/mm_pir_social.png.asset.json";
+import pirCanopy from "@/assets/mediamix/mm_pir_canopy.png.asset.json";
+import pirCard from "@/assets/mediamix/mm_pir_card.png.asset.json";
 import p25 from "@/assets/mediamix/mm_page_25.jpg.asset.json";
-import p27 from "@/assets/mediamix/mm_page_27.jpg.asset.json";
-import p31 from "@/assets/mediamix/mm_page_31.jpg.asset.json";
+import saanGrid from "@/assets/mediamix/mm_saan_grid.png.asset.json";
+import fsProfile from "@/assets/mediamix/mm_fs_profile.png.asset.json";
+import fsReels1 from "@/assets/mediamix/mm_fs_reels1.png.asset.json";
+import fsReels2 from "@/assets/mediamix/mm_fs_reels2.png.asset.json";
 import p35 from "@/assets/mediamix/mm_page_35.jpg.asset.json";
-import p37 from "@/assets/mediamix/mm_page_37.jpg.asset.json";
+import wowBrochure from "@/assets/mediamix/mm_wow_brochure.png.asset.json";
 
 export const Route = createFileRoute("/projects/mediamix")({
   head: () => ({
@@ -384,20 +388,41 @@ function MediaMixCaseStudy() {
         </div>
       </section>
 
-      {/* PIR */}
+      {/* PIR — SOCIAL MEDIA */}
       <ShowcaseRow
         bg
         n="06"
         label="PIR Brand · Mustard Oil"
-        title="PIR Brand · Mustard Oil"
-        description="Designed social media carousel content focused on food storytelling, recipe presentation, ingredient highlights, and product integration while maintaining a clean and engaging visual identity."
-        src={p17.url}
-        alt="PIR Brand — Kashmiri shrimp dumplings recipe carousel"
+        title="PIR Brand · Social Media Campaigns"
+        description="Created engaging social media campaigns for PIR Brand Mustard Oil, focusing on product storytelling, seasonal promotions, recipe-based communication, and brand awareness while maintaining a consistent visual identity."
+        src={pirSocial.url}
+        alt="PIR Brand — Instagram social media posts"
+      />
+
+      {/* PIR — CANOPY TENT */}
+      <ShowcaseRow
+        n="07"
+        label="PIR Brand · Canopy Tent Design"
+        title="Canopy Tent Design"
+        description="Designed promotional canopy tent branding for on-ground marketing activities, ensuring strong product visibility, consistent branding, and effective retail activation."
+        src={pirCanopy.url}
+        alt="PIR Brand — MustaPure promotional canopy tent"
+      />
+
+      {/* PIR — BUSINESS CARD */}
+      <ShowcaseRow
+        bg
+        n="08"
+        label="PIR Brand · Business Card Design"
+        title="Business Card Design"
+        description="Developed professional business card stationery reflecting the PIR Brand visual identity through a clean layout, strong brand colors, and clear information hierarchy."
+        src={pirCard.url}
+        alt="PIR Brand — Business card stationery design"
       />
 
       {/* SILVERGLADES */}
       <ShowcaseRow
-        n="07"
+        n="09"
         label="Silverglades · Real Estate"
         title="Silverglades · Real Estate"
         description="Designed a Maha Shivratri reel for Silverglades — a premium real-estate developer — exploring two visual directions, one bold and graphic, the other subtle and editorial, while staying on-brand for The Address Makers."
@@ -408,28 +433,49 @@ function MediaMixCaseStudy() {
       {/* SAAN VERDANTÉ */}
       <ShowcaseRow
         bg
-        n="08"
+        n="10"
         label="Saan Verdanté · Real Estate"
-        title="Saan Verdanté · Nature Inspired Living"
-        description="Crafted nature-inspired social posts and launch creatives for Saan Verdanté, Sector 95 Gurugram — translating the project's architecture and greenery into a calm, premium digital presence."
-        src={p27.url}
-        alt="Saan Verdanté — Sector 95 Gurugram launch post"
+        title="Saan Verdanté · Reel Thumbnails"
+        description="Created social media reel thumbnails and Instagram grid assets for Saan Verdanté, maintaining a luxury real-estate aesthetic through clean typography, nature-inspired visuals, and a cohesive digital presence."
+        src={saanGrid.url}
+        alt="Saan Verdanté — Nature Inspired Living Instagram grid"
       />
 
-      {/* THE FOOD STREET */}
+      {/* THE FOOD STREET — PROFILE */}
       <ShowcaseRow
-        n="09"
+        n="11"
         label="The Food Street · F&B"
-        title="The Food Street — a feast for the eyes at 226K scale."
-        description="Designed reels and posts for The Food Street's Instagram, featuring tempting food content from top brands like KFC, Costa Coffee and Pizza Hut — under the brand's high-energy food language that tastes as good as it feels."
-        src={p31.url}
-        alt="The Food Street Instagram profile grid"
+        title="The Food Street · Instagram Profile"
+        description="Designed engaging social media content for The Food Street featuring restaurant promotions, festive campaigns, food storytelling, snack promotions, and brand-focused digital marketing creatives across multiple food categories."
+        src={fsProfile.url}
+        alt="The Food Street — Instagram profile mockup"
+      />
+
+      {/* FOOD STREET — REELS */}
+      <ShowcaseRow
+        bg
+        n="12"
+        label="The Food Street · Reels"
+        title="Food Street · Snack Campaign Reels"
+        description="Created Instagram reel creatives promoting popular food items through vibrant compositions, strong visual hierarchy, and social-first content designed to increase engagement."
+        src={fsReels1.url}
+        alt="The Food Street — Snack campaign Instagram reels"
+      />
+
+      {/* FOOD STREET — CAMPAIGNS */}
+      <ShowcaseRow
+        n="13"
+        label="The Food Street · Campaigns"
+        title="Food Street · Social Media Campaigns"
+        description="Developed promotional social media campaigns highlighting restaurant partnerships, food offers, festive promotions, and audience engagement content."
+        src={fsReels2.url}
+        alt="The Food Street — Social media campaign reels"
       />
 
       {/* ROSLYN COFFEE */}
       <ShowcaseRow
         bg
-        n="10"
+        n="14"
         label="Roslyn Coffee · F&B"
         title="Roslyn Coffee — minimal, functional menu."
         description="Designed a sleek, minimal menu for Roslyn Coffee — no unnecessary elements, just a clean layout that lets the offering breathe and reads effortlessly in a café setting."
@@ -439,19 +485,19 @@ function MediaMixCaseStudy() {
 
       {/* WHEEL OF WELLNESS */}
       <ShowcaseRow
-        n="11"
+        n="15"
         label="Wheel of Wellness · Health"
-        title="Wheel of Wellness — learn to fit living."
-        description="Designed a catalog for Wheel of Wellness, a doctor-led initiative covering exercise, pilates, mindfulness and nutrition — a clean, structured layout built around the brand's Requirement → Plan → Action → Result → Monitoring framework."
-        src={p37.url}
-        alt="Wheel of Wellness catalog cover"
+        title="Wheel of Wellness · Brochure Design"
+        description="Designed a premium brochure showcasing wellness services, membership offerings, and brand philosophy through a clean editorial layout, elegant typography, and luxury lifestyle imagery."
+        src={wowBrochure.url}
+        alt="Wheel of Wellness — Brochure design"
       />
 
 
       {/* DESIGN PROCESS */}
       <section className="px-4 sm:px-8 py-24 bg-white/[0.02] border-y border-white/5">
         <div className="mx-auto max-w-6xl">
-          <SectionLabel n="12">Design Process</SectionLabel>
+          <SectionLabel n="16">Design Process</SectionLabel>
           <motion.h2 {...fade} className="font-display text-3xl sm:text-4xl leading-tight font-semibold mb-12">
             Brief to delivery, every week, every client.
           </motion.h2>
@@ -474,7 +520,7 @@ function MediaMixCaseStudy() {
       {/* TOOLS */}
       <section className="px-4 sm:px-8 py-24">
         <div className="mx-auto max-w-6xl">
-          <SectionLabel n="13">Tools Used</SectionLabel>
+          <SectionLabel n="17">Tools Used</SectionLabel>
           <div className="grid sm:grid-cols-3 gap-5">
             {tools.map((t) => (
               <motion.div
@@ -493,7 +539,7 @@ function MediaMixCaseStudy() {
       {/* LEARNINGS */}
       <section className="px-4 sm:px-8 py-24 bg-white/[0.02] border-y border-white/5">
         <div className="mx-auto max-w-6xl">
-          <SectionLabel n="14">Key Learnings &amp; Growth</SectionLabel>
+          <SectionLabel n="18">Key Learnings &amp; Growth</SectionLabel>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {learnings.map((l, i) => (
               <motion.div
@@ -512,7 +558,7 @@ function MediaMixCaseStudy() {
       {/* FINAL OUTCOME */}
       <section className="px-4 sm:px-8 py-24">
         <div className="mx-auto max-w-6xl">
-          <SectionLabel n="15">Final Outcome</SectionLabel>
+          <SectionLabel n="19">Final Outcome</SectionLabel>
           <motion.div {...fade} className="max-w-3xl">
             <h2 className="font-display text-3xl sm:text-5xl leading-[1.05] font-semibold mb-6">
               Eleven weeks. Seven clients. <span className="text-accent-purple italic font-light">One sharper designer.</span>
