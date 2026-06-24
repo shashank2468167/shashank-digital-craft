@@ -2,17 +2,14 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 
-import p7 from "@/assets/mediamix/mm_page_7.jpg.asset.json";
-import p9 from "@/assets/mediamix/mm_page_9.jpg.asset.json";
-import p11 from "@/assets/mediamix/mm_page_11.jpg.asset.json";
-import p12 from "@/assets/mediamix/mm_page_12.jpg.asset.json";
-import p13 from "@/assets/mediamix/mm_page_13.jpg.asset.json";
-import p14 from "@/assets/mediamix/mm_page_14.jpg.asset.json";
-import p15 from "@/assets/mediamix/mm_page_15.jpg.asset.json";
-import p17 from "@/assets/mediamix/mm_page_17.jpg.asset.json";
-import p18 from "@/assets/mediamix/mm_page_18.jpg.asset.json";
-import p19 from "@/assets/mediamix/mm_page_19.jpg.asset.json";
-import p21 from "@/assets/mediamix/mm_page_21.jpg.asset.json";
+import p7 from "@/assets/mediamix/mm_clients_logos.jpg.asset.json";
+import p9 from "@/assets/mediamix/mm_overview_logo.png.asset.json";
+import p11 from "@/assets/mediamix/mm_ivoltaa_hero.png.asset.json";
+import p12 from "@/assets/mediamix/mm_ivoltaa_festival.png.asset.json";
+import p13 from "@/assets/mediamix/mm_ivoltaa_100w.png.asset.json";
+import p14 from "@/assets/mediamix/mm_ivoltaa_sound.png.asset.json";
+import p15 from "@/assets/mediamix/mm_ivoltaa_reel.png.asset.json";
+import p17 from "@/assets/mediamix/mm_pir_carousel.png.asset.json";
 import p22 from "@/assets/mediamix/mm_page_22.jpg.asset.json";
 import p23 from "@/assets/mediamix/mm_page_23.jpg.asset.json";
 import p25 from "@/assets/mediamix/mm_page_25.jpg.asset.json";
@@ -331,35 +328,29 @@ function MediaMixCaseStudy() {
       {/* IVOLTAA */}
       <section className="px-4 sm:px-8 py-24">
         <div className="mx-auto max-w-6xl">
-          <SectionLabel n="05">iVoltaa · Tech</SectionLabel>
+          <SectionLabel n="05">iVoltaa · Tech Accessories Brand</SectionLabel>
           <div className="grid lg:grid-cols-2 gap-12 items-start mb-10">
             <motion.div {...fade}>
               <h2 className="font-display text-3xl sm:text-4xl leading-tight font-semibold mb-6">
-                Unleash A1 audio. Stay seamlessly powered.
+                iVoltaa · Tech Accessories Brand
               </h2>
-              <p className="text-foreground/75 leading-relaxed mb-4">
-                iVoltaa is a tech brand specializing in high-quality cables,
-                connectors and chargers. The brief was to translate a sleek,
-                performance-driven product range into social creatives that
-                kept the brand's modern, tech-savvy aesthetic.
-              </p>
               <p className="text-foreground/75 leading-relaxed">
-                I designed 7 social posts and 2 reels in After Effects —
-                product hero shots, festival creatives for Lohri, Vasant
-                Panchami and Makar Sankranti, and an animated collage for
-                the HDMI 2.0 cable.
+                Designed social media creatives and digital campaigns for
+                iVoltaa, a technology accessories brand focused on cables,
+                chargers, and audio products. The work included product
+                promotions, campaign visuals, festive creatives, and animated
+                content while maintaining a modern and performance-driven brand
+                identity.
               </p>
             </motion.div>
-            <Figure src={p11.url} alt="iVoltaa social post hero — A1 audio cable" />
+            <Figure src={p11.url} alt="iVoltaa social media showcase — product hero shots" ratio="aspect-[16/10]" />
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            <Figure src={p12.url} alt="iVoltaa festival creatives — Lohri, Vasant Panchami, Makar Sankranti" caption="Festival creatives — Lohri, Vasant Panchami, Makar Sankranti." />
-            <Figure src={p13.url} alt="iVoltaa 100W super fast charging post" caption="Pass the power — 100W super fast charging campaign." />
-          </div>
-          <div className="grid md:grid-cols-2 gap-6 mt-6">
-            <Figure src={p14.url} alt="iVoltaa audio cable hero — race car scene" caption="Ignite your music — flawless, uninterrupted sound." />
-            <Figure src={p15.url} alt="iVoltaa Instagram Reel — animated product collage" caption="Reel — animated product collage in After Effects." />
+          <div className="space-y-6">
+            <Figure src={p12.url} alt="iVoltaa festival creatives — Lohri, Vasant Panchami & Makar Sankranti" ratio="aspect-[16/10]" caption="Festival Creatives — Lohri, Vasant Panchami & Makar Sankranti. Created festive social media campaigns aligned with the iVoltaa brand identity while celebrating major Indian festivals through engaging digital content." />
+            <Figure src={p13.url} alt="iVoltaa — Pass the Power, 100W Super Fast Charging Campaign" ratio="aspect-[16/10]" caption="Pass the Power — 100W Super Fast Charging Campaign. Developed a high-impact promotional creative highlighting iVoltaa's 100W fast charging capability through bold typography, strong visual hierarchy, and product-focused storytelling." />
+            <Figure src={p14.url} alt="iVoltaa — Ignite Your Music, Flawless Uninterrupted Sound" ratio="aspect-[16/10]" caption="Ignite Your Music — Flawless, Uninterrupted Sound. Designed a campaign emphasizing premium audio quality and uninterrupted listening experiences through immersive visuals and dynamic product presentation." />
+            <Figure src={p15.url} alt="iVoltaa Reel — Animated product collage in After Effects" ratio="aspect-[16/10]" caption="Reel — Animated Product Collage in After Effects. Created an animated product showcase using After Effects to present iVoltaa products through motion design, smooth transitions, and engaging social-first storytelling." />
           </div>
         </div>
       </section>
@@ -368,37 +359,23 @@ function MediaMixCaseStudy() {
       <section className="px-4 sm:px-8 py-24 bg-white/[0.02] border-y border-white/5">
         <div className="mx-auto max-w-6xl">
           <SectionLabel n="06">PIR Brand · Mustard Oil</SectionLabel>
-          <div className="grid lg:grid-cols-[1.1fr_1fr] gap-12 items-start mb-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-start mb-10">
             <motion.div {...fade}>
               <h2 className="font-display text-3xl sm:text-4xl leading-tight font-semibold mb-6">
-                Recipes, immunity and a brand built on purity.
+                PIR Brand · Mustard Oil
               </h2>
-              <p className="text-foreground/75 leading-relaxed mb-4">
-                For PIR, a mustard oil brand, I designed 7 recipe carousels
-                and 5 Instagram posts — educating the audience with healthy,
-                tasty recipes while positioning the oil as a healthier kitchen
-                choice.
-              </p>
               <p className="text-foreground/75 leading-relaxed">
-                I also designed PIR's business cards and a promotion-table
-                graphic — a new learning experience in scale, placement and
-                physical-format design.
+                Designed social media carousel content focused on food
+                storytelling, recipe presentation, ingredient highlights, and
+                product integration while maintaining a clean and engaging
+                visual identity.
               </p>
             </motion.div>
-            <Figure src={p17.url} alt="PIR Kashmiri shrimp dumplings recipe carousel" caption="Recipe carousel — Kashmiri shrimp dumplings." />
           </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            <Figure src={p18.url} alt="PIR immunity campaign and recipe posts" />
-            <Figure src={p19.url} alt="PIR lamb recipe carousel" />
-            <Figure src={p21.url} alt="PIR business cards" caption="Business cards — director set." />
-          </div>
-          <div className="grid md:grid-cols-2 gap-6 mt-6">
-            <Figure src={p22.url} alt="PIR Musta Pure — Purity you can taste" ratio="aspect-[16/10]" />
-            <Figure src={p23.url} alt="PIR promotion table graphic" ratio="aspect-[16/10]" caption="Promotion-table graphic — Purity you can taste." />
-          </div>
+          <Figure src={p17.url} alt="PIR Brand — Kashmiri shrimp dumplings recipe carousel" ratio="aspect-[16/9]" caption="Recipe carousel — Kashmiri shrimp dumplings." />
         </div>
       </section>
+
 
       {/* SILVERGLADES + SAAN VERDANTÉ */}
       <section className="px-4 sm:px-8 py-24">
