@@ -92,7 +92,7 @@ function Figure({
   src,
   alt,
   caption,
-  ratio = "aspect-[4/5]",
+  ratio = "aspect-[16/10]",
 }: {
   src: string;
   alt: string;
@@ -106,13 +106,49 @@ function Figure({
           src={src}
           alt={alt}
           loading="lazy"
-          className="w-full h-full object-contain hover:scale-[1.02] transition-transform duration-700"
+          className="w-full h-full object-cover hover:scale-[1.02] transition-transform duration-700"
         />
       </div>
       {caption && <figcaption className="text-xs text-foreground/50">{caption}</figcaption>}
     </motion.figure>
   );
 }
+
+function ShowcaseRow({
+  label,
+  n,
+  title,
+  description,
+  src,
+  alt,
+  bg = false,
+}: {
+  label: string;
+  n: string;
+  title: string;
+  description: React.ReactNode;
+  src: string;
+  alt: string;
+  bg?: boolean;
+}) {
+  return (
+    <section className={`px-4 sm:px-8 py-24 ${bg ? "bg-white/[0.02] border-y border-white/5" : ""}`}>
+      <div className="mx-auto max-w-6xl">
+        <SectionLabel n={n}>{label}</SectionLabel>
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <motion.div {...fade}>
+            <h2 className="font-display text-3xl sm:text-4xl leading-tight font-semibold mb-6">
+              {title}
+            </h2>
+            <p className="text-foreground/75 leading-relaxed">{description}</p>
+          </motion.div>
+          <Figure src={src} alt={alt} ratio="aspect-[16/10]" />
+        </div>
+      </div>
+    </section>
+  );
+}
+
 
 const meta = [
   { k: "Company", v: "MEDIAMIX Branding & Communications, Gurgaon" },
