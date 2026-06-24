@@ -10,18 +10,11 @@ import p13 from "@/assets/mediamix/mm_ivoltaa_100w.png.asset.json";
 import p14 from "@/assets/mediamix/mm_ivoltaa_sound.png.asset.json";
 import p15 from "@/assets/mediamix/mm_ivoltaa_reel.png.asset.json";
 import p17 from "@/assets/mediamix/mm_pir_carousel.png.asset.json";
-import p22 from "@/assets/mediamix/mm_page_22.jpg.asset.json";
-import p23 from "@/assets/mediamix/mm_page_23.jpg.asset.json";
 import p25 from "@/assets/mediamix/mm_page_25.jpg.asset.json";
 import p27 from "@/assets/mediamix/mm_page_27.jpg.asset.json";
-import p28 from "@/assets/mediamix/mm_page_28.jpg.asset.json";
-import p29 from "@/assets/mediamix/mm_page_29.jpg.asset.json";
 import p31 from "@/assets/mediamix/mm_page_31.jpg.asset.json";
-import p32 from "@/assets/mediamix/mm_page_32.jpg.asset.json";
-import p33 from "@/assets/mediamix/mm_page_33.jpg.asset.json";
 import p35 from "@/assets/mediamix/mm_page_35.jpg.asset.json";
 import p37 from "@/assets/mediamix/mm_page_37.jpg.asset.json";
-import p38 from "@/assets/mediamix/mm_page_38.jpg.asset.json";
 
 export const Route = createFileRoute("/projects/mediamix")({
   head: () => ({
@@ -92,7 +85,7 @@ function Figure({
   src,
   alt,
   caption,
-  ratio = "aspect-[4/5]",
+  ratio = "aspect-[16/10]",
 }: {
   src: string;
   alt: string;
@@ -106,13 +99,49 @@ function Figure({
           src={src}
           alt={alt}
           loading="lazy"
-          className="w-full h-full object-contain hover:scale-[1.02] transition-transform duration-700"
+          className="w-full h-full object-cover hover:scale-[1.02] transition-transform duration-700"
         />
       </div>
       {caption && <figcaption className="text-xs text-foreground/50">{caption}</figcaption>}
     </motion.figure>
   );
 }
+
+function ShowcaseRow({
+  label,
+  n,
+  title,
+  description,
+  src,
+  alt,
+  bg = false,
+}: {
+  label: string;
+  n: string;
+  title: string;
+  description: React.ReactNode;
+  src: string;
+  alt: string;
+  bg?: boolean;
+}) {
+  return (
+    <section className={`px-4 sm:px-8 py-24 ${bg ? "bg-white/[0.02] border-y border-white/5" : ""}`}>
+      <div className="mx-auto max-w-6xl">
+        <SectionLabel n={n}>{label}</SectionLabel>
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <motion.div {...fade}>
+            <h2 className="font-display text-3xl sm:text-4xl leading-tight font-semibold mb-6">
+              {title}
+            </h2>
+            <p className="text-foreground/75 leading-relaxed">{description}</p>
+          </motion.div>
+          <Figure src={src} alt={alt} ratio="aspect-[16/10]" />
+        </div>
+      </div>
+    </section>
+  );
+}
+
 
 const meta = [
   { k: "Company", v: "MEDIAMIX Branding & Communications, Gurgaon" },
@@ -356,89 +385,73 @@ function MediaMixCaseStudy() {
       </section>
 
       {/* PIR */}
-      <section className="px-4 sm:px-8 py-24 bg-white/[0.02] border-y border-white/5">
-        <div className="mx-auto max-w-6xl">
-          <SectionLabel n="06">PIR Brand · Mustard Oil</SectionLabel>
-          <div className="grid lg:grid-cols-2 gap-12 items-start mb-10">
-            <motion.div {...fade}>
-              <h2 className="font-display text-3xl sm:text-4xl leading-tight font-semibold mb-6">
-                PIR Brand · Mustard Oil
-              </h2>
-              <p className="text-foreground/75 leading-relaxed">
-                Designed social media carousel content focused on food
-                storytelling, recipe presentation, ingredient highlights, and
-                product integration while maintaining a clean and engaging
-                visual identity.
-              </p>
-            </motion.div>
-          </div>
-          <Figure src={p17.url} alt="PIR Brand — Kashmiri shrimp dumplings recipe carousel" ratio="aspect-[16/9]" caption="Recipe carousel — Kashmiri shrimp dumplings." />
-        </div>
-      </section>
+      <ShowcaseRow
+        bg
+        n="06"
+        label="PIR Brand · Mustard Oil"
+        title="PIR Brand · Mustard Oil"
+        description="Designed social media carousel content focused on food storytelling, recipe presentation, ingredient highlights, and product integration while maintaining a clean and engaging visual identity."
+        src={p17.url}
+        alt="PIR Brand — Kashmiri shrimp dumplings recipe carousel"
+      />
 
+      {/* SILVERGLADES */}
+      <ShowcaseRow
+        n="07"
+        label="Silverglades · Real Estate"
+        title="Silverglades · Real Estate"
+        description="Designed a Maha Shivratri reel for Silverglades — a premium real-estate developer — exploring two visual directions, one bold and graphic, the other subtle and editorial, while staying on-brand for The Address Makers."
+        src={p25.url}
+        alt="Silverglades — Maha Shivratri reel"
+      />
 
-      {/* SILVERGLADES + SAAN VERDANTÉ */}
-      <section className="px-4 sm:px-8 py-24">
-        <div className="mx-auto max-w-6xl">
-          <SectionLabel n="07">Silverglades &amp; Saan Verdanté · Real Estate</SectionLabel>
-          <motion.h2 {...fade} className="font-display text-3xl sm:text-4xl leading-tight font-semibold mb-10 max-w-3xl">
-            Two real-estate brands, two very different voices.
-          </motion.h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <Figure src={p25.url} alt="Silverglades Maha Shivratri reel" caption="Silverglades — Maha Shivratri reel, two visual options." />
-            <Figure src={p27.url} alt="Saan Verdanté Sector 95 Gurugram social post" caption="Saan Verdanté — Sector 95 Gurugram launch post." />
-          </div>
-          <div className="grid md:grid-cols-2 gap-6 mt-6">
-            <Figure src={p28.url} alt="Saan Verdanté — Nature Inspired Living" caption="Nature Inspired Living — Saan Verdanté brand storytelling." />
-            <Figure src={p29.url} alt="Saan Verdanté Instagram profile" caption="Saan Verdanté — Instagram presence." />
-          </div>
-        </div>
-      </section>
+      {/* SAAN VERDANTÉ */}
+      <ShowcaseRow
+        bg
+        n="08"
+        label="Saan Verdanté · Real Estate"
+        title="Saan Verdanté · Nature Inspired Living"
+        description="Crafted nature-inspired social posts and launch creatives for Saan Verdanté, Sector 95 Gurugram — translating the project's architecture and greenery into a calm, premium digital presence."
+        src={p27.url}
+        alt="Saan Verdanté — Sector 95 Gurugram launch post"
+      />
 
       {/* THE FOOD STREET */}
-      <section className="px-4 sm:px-8 py-24 bg-white/[0.02] border-y border-white/5">
-        <div className="mx-auto max-w-6xl">
-          <SectionLabel n="08">The Food Street · F&amp;B</SectionLabel>
-          <div className="grid lg:grid-cols-2 gap-12 items-start mb-10">
-            <motion.div {...fade}>
-              <h2 className="font-display text-3xl sm:text-4xl leading-tight font-semibold mb-6">
-                A feast for the eyes — at 226K-follower scale.
-              </h2>
-              <p className="text-foreground/75 leading-relaxed">
-                The Food Street's Instagram is a feast for the eyes,
-                featuring tempting food content from top brands like KFC,
-                Costa Coffee and Pizza Hut. I designed reels and posts
-                under the brand's high-energy food language — sounds that
-                taste as good as they feel.
-              </p>
-            </motion.div>
-            <Figure src={p31.url} alt="The Food Street Instagram profile grid" ratio="aspect-[4/3]" />
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            <Figure src={p32.url} alt="The Food Street reel — KFC, paratha, pizza" />
-            <Figure src={p33.url} alt="The Food Street reel — KFC bucket" />
-          </div>
-        </div>
-      </section>
+      <ShowcaseRow
+        n="09"
+        label="The Food Street · F&B"
+        title="The Food Street — a feast for the eyes at 226K scale."
+        description="Designed reels and posts for The Food Street's Instagram, featuring tempting food content from top brands like KFC, Costa Coffee and Pizza Hut — under the brand's high-energy food language that tastes as good as it feels."
+        src={p31.url}
+        alt="The Food Street Instagram profile grid"
+      />
 
-      {/* ROSLYN + WHEEL */}
-      <section className="px-4 sm:px-8 py-24">
-        <div className="mx-auto max-w-6xl">
-          <SectionLabel n="09">Roslyn Coffee &amp; Wheel of Wellness</SectionLabel>
-          <div className="grid md:grid-cols-2 gap-6">
-            <Figure src={p35.url} alt="Roslyn Coffee menu" caption="Roslyn Coffee — minimal, functional menu." />
-            <Figure src={p37.url} alt="Wheel of Wellness catalog cover" caption="Wheel of Wellness — Learn to fit living." />
-          </div>
-          <div className="mt-6">
-            <Figure src={p38.url} alt="Wheel of Wellness catalog process — Requirement, Plan, Action, Result, Monitoring" ratio="aspect-[16/10]" caption="Wheel of Wellness — process catalog spread." />
-          </div>
-        </div>
-      </section>
+      {/* ROSLYN COFFEE */}
+      <ShowcaseRow
+        bg
+        n="10"
+        label="Roslyn Coffee · F&B"
+        title="Roslyn Coffee — minimal, functional menu."
+        description="Designed a sleek, minimal menu for Roslyn Coffee — no unnecessary elements, just a clean layout that lets the offering breathe and reads effortlessly in a café setting."
+        src={p35.url}
+        alt="Roslyn Coffee menu"
+      />
+
+      {/* WHEEL OF WELLNESS */}
+      <ShowcaseRow
+        n="11"
+        label="Wheel of Wellness · Health"
+        title="Wheel of Wellness — learn to fit living."
+        description="Designed a catalog for Wheel of Wellness, a doctor-led initiative covering exercise, pilates, mindfulness and nutrition — a clean, structured layout built around the brand's Requirement → Plan → Action → Result → Monitoring framework."
+        src={p37.url}
+        alt="Wheel of Wellness catalog cover"
+      />
+
 
       {/* DESIGN PROCESS */}
       <section className="px-4 sm:px-8 py-24 bg-white/[0.02] border-y border-white/5">
         <div className="mx-auto max-w-6xl">
-          <SectionLabel n="10">Design Process</SectionLabel>
+          <SectionLabel n="12">Design Process</SectionLabel>
           <motion.h2 {...fade} className="font-display text-3xl sm:text-4xl leading-tight font-semibold mb-12">
             Brief to delivery, every week, every client.
           </motion.h2>
@@ -461,7 +474,7 @@ function MediaMixCaseStudy() {
       {/* TOOLS */}
       <section className="px-4 sm:px-8 py-24">
         <div className="mx-auto max-w-6xl">
-          <SectionLabel n="11">Tools Used</SectionLabel>
+          <SectionLabel n="13">Tools Used</SectionLabel>
           <div className="grid sm:grid-cols-3 gap-5">
             {tools.map((t) => (
               <motion.div
@@ -480,7 +493,7 @@ function MediaMixCaseStudy() {
       {/* LEARNINGS */}
       <section className="px-4 sm:px-8 py-24 bg-white/[0.02] border-y border-white/5">
         <div className="mx-auto max-w-6xl">
-          <SectionLabel n="12">Key Learnings &amp; Growth</SectionLabel>
+          <SectionLabel n="14">Key Learnings &amp; Growth</SectionLabel>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {learnings.map((l, i) => (
               <motion.div
@@ -499,7 +512,7 @@ function MediaMixCaseStudy() {
       {/* FINAL OUTCOME */}
       <section className="px-4 sm:px-8 py-24">
         <div className="mx-auto max-w-6xl">
-          <SectionLabel n="13">Final Outcome</SectionLabel>
+          <SectionLabel n="15">Final Outcome</SectionLabel>
           <motion.div {...fade} className="max-w-3xl">
             <h2 className="font-display text-3xl sm:text-5xl leading-[1.05] font-semibold mb-6">
               Eleven weeks. Seven clients. <span className="text-accent-purple italic font-light">One sharper designer.</span>
