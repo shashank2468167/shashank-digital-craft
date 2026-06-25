@@ -558,7 +558,7 @@ function MediaMixCaseStudy() {
       {/* FINAL OUTCOME */}
       <section className="px-4 sm:px-8 py-24">
         <div className="mx-auto max-w-6xl">
-          <SectionLabel n="19">Final Outcome</SectionLabel>
+          <SectionLabel n="17">Final Outcome</SectionLabel>
           <motion.div {...fade} className="max-w-3xl">
             <h2 className="font-display text-3xl sm:text-5xl leading-[1.05] font-semibold mb-6">
               Eleven weeks. Seven clients. <span className="text-accent-purple italic font-light">One sharper designer.</span>
