@@ -459,31 +459,41 @@ function MediaMixCaseStudy() {
         alt="The Food Street — Instagram profile mockup"
       />
 
-      {/* FOOD STREET — REELS */}
-      <ShowcaseRow
-        bg
-        n="12"
-        label="The Food Street · Reels"
-        title="Food Street · Snack Campaign Reels"
-        description="Created Instagram reel creatives promoting popular food items through vibrant compositions, strong visual hierarchy, and social-first content designed to increase engagement."
-        src={fsReels1.url}
-        alt="The Food Street — Snack campaign Instagram reels"
-      />
-
-      {/* FOOD STREET — CAMPAIGNS */}
-      <ShowcaseRow
-        n="13"
-        label="The Food Street · Campaigns"
-        title="Food Street · Social Media Campaigns"
-        description="Developed promotional social media campaigns highlighting restaurant partnerships, food offers, festive promotions, and audience engagement content."
-        src={fsReels2.url}
-        alt="The Food Street — Social media campaign reels"
-      />
+      {/* FOOD STREET — REELS (stacked) */}
+      <section className="px-4 sm:px-8 py-24 bg-white/[0.02] border-y border-white/5">
+        <div className="mx-auto max-w-6xl">
+          <SectionLabel n="12">The Food Street · Reels</SectionLabel>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div {...fade}>
+              <h2 className="font-display text-3xl sm:text-4xl leading-tight font-semibold mb-6">
+                Food Street · Snack Campaign Reels
+              </h2>
+              <p className="text-foreground/75 leading-relaxed">
+                Created Instagram reel creatives promoting popular food items through vibrant compositions, strong visual hierarchy, and social-first content designed to increase engagement.
+              </p>
+            </motion.div>
+            <div className="space-y-6">
+              <Figure
+                src={fsReelsTop.url}
+                alt="The Food Street — Snack campaign reels (top)"
+                ratio="aspect-[16/10]"
+                fit="contain"
+                frameClass="border border-white/10 bg-[#1a2557]"
+                imgPadding="p-4"
+              />
+              <Figure
+                src={fsReels1.url}
+                alt="The Food Street — Snack campaign reels (bottom)"
+                ratio="aspect-[16/10]"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* ROSLYN COFFEE */}
       <ShowcaseRow
-        bg
-        n="14"
+        n="13"
         label="Roslyn Coffee · F&B"
         title="Roslyn Coffee — minimal, functional menu."
         description="Designed a sleek, minimal menu for Roslyn Coffee — no unnecessary elements, just a clean layout that lets the offering breathe and reads effortlessly in a café setting."
@@ -493,13 +503,15 @@ function MediaMixCaseStudy() {
 
       {/* WHEEL OF WELLNESS */}
       <ShowcaseRow
-        n="15"
+        bg
+        n="14"
         label="Wheel of Wellness · Health"
         title="Wheel of Wellness · Brochure Design"
         description="Designed a premium brochure showcasing wellness services, membership offerings, and brand philosophy through a clean editorial layout, elegant typography, and luxury lifestyle imagery."
         src={wowBrochure.url}
         alt="Wheel of Wellness — Brochure design"
       />
+
 
 
       {/* DESIGN PROCESS */}
