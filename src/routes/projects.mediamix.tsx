@@ -288,7 +288,7 @@ function MediaMixCaseStudy() {
                 the strength of any single one.
               </p>
             </motion.div>
-            <Figure src={p9.url} alt="MEDIAMIX company profile" ratio="aspect-[3/4]" />
+            <Figure src={mmLogo.url} alt="MEDIAMIX Branding & Communications logo" ratio="aspect-[3/4]" fit="contain" bgClass="bg-white" padClass="p-10 sm:p-16" />
           </div>
         </div>
       </section>
