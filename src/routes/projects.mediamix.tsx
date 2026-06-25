@@ -449,41 +449,33 @@ function MediaMixCaseStudy() {
         alt="Saan Verdanté — Nature Inspired Living Instagram grid"
       />
 
-      {/* THE FOOD STREET — PROFILE */}
-      <ShowcaseRow
-        n="11"
-        label="The Food Street · F&B"
-        title="The Food Street · Instagram Profile"
-        description="Designed engaging social media content for The Food Street featuring restaurant promotions, festive campaigns, food storytelling, snack promotions, and brand-focused digital marketing creatives across multiple food categories."
-        src={fsProfile.url}
-        alt="The Food Street — Instagram profile mockup"
-      />
-
-      {/* FOOD STREET — REELS */}
-      <ShowcaseRow
-        bg
-        n="12"
-        label="The Food Street · Reels"
-        title="Food Street · Snack Campaign Reels"
-        description="Created Instagram reel creatives promoting popular food items through vibrant compositions, strong visual hierarchy, and social-first content designed to increase engagement."
-        src={fsReels1.url}
-        alt="The Food Street — Snack campaign Instagram reels"
-      />
-
-      {/* FOOD STREET — CAMPAIGNS */}
-      <ShowcaseRow
-        n="13"
-        label="The Food Street · Campaigns"
-        title="Food Street · Social Media Campaigns"
-        description="Developed promotional social media campaigns highlighting restaurant partnerships, food offers, festive promotions, and audience engagement content."
-        src={fsReels2.url}
-        alt="The Food Street — Social media campaign reels"
-      />
+      {/* RESTAURANT REELS — MERGED */}
+      <section className="px-4 sm:px-8 py-24">
+        <div className="mx-auto max-w-6xl">
+          <SectionLabel n="11">F&amp;B · Restaurant Marketing</SectionLabel>
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-10">
+            <motion.div {...fade}>
+              <h2 className="font-display text-3xl sm:text-4xl leading-tight font-semibold mb-6">
+                Snack Campaign Reels
+              </h2>
+              <p className="text-foreground/75 leading-relaxed">
+                Created Instagram reel creatives and social media campaigns promoting popular food items through vibrant compositions, strong visual hierarchy, and social-first content designed to increase engagement — covering snack promotions, restaurant partnerships, festive promotions, and audience engagement content.
+              </p>
+            </motion.div>
+            <Figure src={fsSnack.url} alt="Snack campaign Instagram reels — sunburst background mockups" ratio="aspect-[16/10]" fit="contain" bgClass="bg-[#0a0a1f]" padClass="p-4" />
+          </div>
+          <div className="grid sm:grid-cols-3 gap-5">
+            <Figure src={fsProfile.url} alt="Instagram profile mockup" ratio="aspect-[3/4]" fit="contain" bgClass="bg-[#0a0a1f]" padClass="p-3" />
+            <Figure src={fsReels1.url} alt="Snack reels — additional creative" ratio="aspect-[3/4]" fit="contain" bgClass="bg-[#0a0a1f]" padClass="p-3" />
+            <Figure src={fsReels2.url} alt="Social media campaign reels" ratio="aspect-[3/4]" fit="contain" bgClass="bg-[#0a0a1f]" padClass="p-3" />
+          </div>
+        </div>
+      </section>
 
       {/* ROSLYN COFFEE */}
       <ShowcaseRow
         bg
-        n="14"
+        n="12"
         label="Roslyn Coffee · F&B"
         title="Roslyn Coffee — minimal, functional menu."
         description="Designed a sleek, minimal menu for Roslyn Coffee — no unnecessary elements, just a clean layout that lets the offering breathe and reads effortlessly in a café setting."
@@ -493,7 +485,7 @@ function MediaMixCaseStudy() {
 
       {/* WHEEL OF WELLNESS */}
       <ShowcaseRow
-        n="15"
+        n="13"
         label="Wheel of Wellness · Health"
         title="Wheel of Wellness · Brochure Design"
         description="Designed a premium brochure showcasing wellness services, membership offerings, and brand philosophy through a clean editorial layout, elegant typography, and luxury lifestyle imagery."
