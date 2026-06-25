@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 
 import p7 from "@/assets/mediamix/mm_clients_logos.jpg.asset.json";
-import p9 from "@/assets/mediamix/mm_overview_logo.png.asset.json";
+import p9 from "@/assets/mediamix/mm_overview_logo_new.png.asset.json";
 import p11 from "@/assets/mediamix/mm_ivoltaa_hero.png.asset.json";
 import p12 from "@/assets/mediamix/mm_ivoltaa_festival.png.asset.json";
-import p13 from "@/assets/mediamix/mm_ivoltaa_100w.png.asset.json";
+import p13 from "@/assets/mediamix/mm_ivoltaa_100w_new.png.asset.json";
 import p14 from "@/assets/mediamix/mm_ivoltaa_sound.png.asset.json";
 import p15 from "@/assets/mediamix/mm_ivoltaa_reel_new.png.asset.json";
 import pirSocial from "@/assets/mediamix/mm_pir_social.png.asset.json";
@@ -15,8 +15,8 @@ import pirCard from "@/assets/mediamix/mm_pir_card.png.asset.json";
 import p25 from "@/assets/mediamix/mm_page_25.jpg.asset.json";
 import saanGrid from "@/assets/mediamix/mm_saan_grid.png.asset.json";
 import fsProfile from "@/assets/mediamix/mm_fs_profile.png.asset.json";
+import fsReelsTop from "@/assets/mediamix/mm_fs_reels_top.png.asset.json";
 import fsReels1 from "@/assets/mediamix/mm_fs_reels1.png.asset.json";
-import fsReels2 from "@/assets/mediamix/mm_fs_reels2.png.asset.json";
 import p35 from "@/assets/mediamix/mm_page_35.jpg.asset.json";
 import wowBrochure from "@/assets/mediamix/mm_wow_brochure.png.asset.json";
 
@@ -90,20 +90,27 @@ function Figure({
   alt,
   caption,
   ratio = "aspect-[16/10]",
+  fit = "cover",
+  frameClass = "border border-white/10 bg-[#0a0a1f]",
+  imgPadding = "",
 }: {
   src: string;
   alt: string;
   caption?: string;
   ratio?: string;
+  fit?: "cover" | "contain";
+  frameClass?: string;
+  imgPadding?: string;
 }) {
+  const fitClass = fit === "contain" ? "object-contain" : "object-cover hover:scale-[1.02]";
   return (
     <motion.figure {...fade} className="space-y-3">
-      <div className={`overflow-hidden rounded-xl border border-white/10 bg-[#0a0a1f] ${ratio}`}>
+      <div className={`overflow-hidden rounded-xl ${frameClass} ${ratio}`}>
         <img
           src={src}
           alt={alt}
           loading="lazy"
-          className="w-full h-full object-cover hover:scale-[1.02] transition-transform duration-700"
+          className={`w-full h-full ${fitClass} ${imgPadding} transition-transform duration-700`}
         />
       </div>
       {caption && <figcaption className="text-xs text-foreground/50">{caption}</figcaption>}
@@ -280,8 +287,9 @@ function MediaMixCaseStudy() {
                 the strength of any single one.
               </p>
             </motion.div>
-            <Figure src={p9.url} alt="MEDIAMIX company profile" ratio="aspect-[3/4]" />
+            <Figure src={p9.url} alt="MEDIAMIX Branding & Communications logo" ratio="aspect-[3/4]" fit="contain" frameClass="border border-white/10 bg-white" imgPadding="p-10 sm:p-14" />
           </div>
+
         </div>
       </section>
 
@@ -381,7 +389,7 @@ function MediaMixCaseStudy() {
 
           <div className="space-y-6">
             <Figure src={p12.url} alt="iVoltaa festival creatives — Lohri, Vasant Panchami & Makar Sankranti" ratio="aspect-[16/10]" caption="Festival Creatives — Lohri, Vasant Panchami & Makar Sankranti. Created festive social media campaigns aligned with the iVoltaa brand identity while celebrating major Indian festivals through engaging digital content." />
-            <Figure src={p13.url} alt="iVoltaa — Pass the Power, 100W Super Fast Charging Campaign" ratio="aspect-[16/10]" caption="Pass the Power — 100W Super Fast Charging Campaign. Developed a high-impact promotional creative highlighting iVoltaa's 100W fast charging capability through bold typography, strong visual hierarchy, and product-focused storytelling." />
+            <Figure src={p13.url} alt="iVoltaa — Pass the Power, 100W Super Fast Charging Campaign" ratio="aspect-[16/10]" fit="contain" frameClass="border border-white/10 bg-[#3a55c8]" caption="Pass the Power — 100W Super Fast Charging Campaign. Developed a high-impact promotional creative highlighting iVoltaa's 100W fast charging capability through bold typography, strong visual hierarchy, and product-focused storytelling." />
             <Figure src={p14.url} alt="iVoltaa — Ignite Your Music, Flawless Uninterrupted Sound" ratio="aspect-[16/10]" caption="Ignite Your Music — Flawless, Uninterrupted Sound. Designed a campaign emphasizing premium audio quality and uninterrupted listening experiences through immersive visuals and dynamic product presentation." />
             <Figure src={p15.url} alt="iVoltaa — Animated Product Reel" ratio="aspect-[16/10]" caption="Animated Product Reel — Created an animated social media reel for iVoltaa showcasing audio accessories through dynamic motion graphics and product-focused storytelling. The reel combines engaging visual transitions, modern typography, and premium product presentation to highlight connectivity and performance while maintaining iVoltaa’s sleek technology-driven brand identity." />
           </div>
@@ -451,31 +459,41 @@ function MediaMixCaseStudy() {
         alt="The Food Street — Instagram profile mockup"
       />
 
-      {/* FOOD STREET — REELS */}
-      <ShowcaseRow
-        bg
-        n="12"
-        label="The Food Street · Reels"
-        title="Food Street · Snack Campaign Reels"
-        description="Created Instagram reel creatives promoting popular food items through vibrant compositions, strong visual hierarchy, and social-first content designed to increase engagement."
-        src={fsReels1.url}
-        alt="The Food Street — Snack campaign Instagram reels"
-      />
-
-      {/* FOOD STREET — CAMPAIGNS */}
-      <ShowcaseRow
-        n="13"
-        label="The Food Street · Campaigns"
-        title="Food Street · Social Media Campaigns"
-        description="Developed promotional social media campaigns highlighting restaurant partnerships, food offers, festive promotions, and audience engagement content."
-        src={fsReels2.url}
-        alt="The Food Street — Social media campaign reels"
-      />
+      {/* FOOD STREET — REELS (stacked) */}
+      <section className="px-4 sm:px-8 py-24 bg-white/[0.02] border-y border-white/5">
+        <div className="mx-auto max-w-6xl">
+          <SectionLabel n="12">The Food Street · Reels</SectionLabel>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div {...fade}>
+              <h2 className="font-display text-3xl sm:text-4xl leading-tight font-semibold mb-6">
+                Food Street · Snack Campaign Reels
+              </h2>
+              <p className="text-foreground/75 leading-relaxed">
+                Created Instagram reel creatives promoting popular food items through vibrant compositions, strong visual hierarchy, and social-first content designed to increase engagement.
+              </p>
+            </motion.div>
+            <div className="space-y-6">
+              <Figure
+                src={fsReelsTop.url}
+                alt="The Food Street — Snack campaign reels (top)"
+                ratio="aspect-[16/10]"
+                fit="contain"
+                frameClass="border border-white/10 bg-[#1a2557]"
+                imgPadding="p-4"
+              />
+              <Figure
+                src={fsReels1.url}
+                alt="The Food Street — Snack campaign reels (bottom)"
+                ratio="aspect-[16/10]"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* ROSLYN COFFEE */}
       <ShowcaseRow
-        bg
-        n="14"
+        n="13"
         label="Roslyn Coffee · F&B"
         title="Roslyn Coffee — minimal, functional menu."
         description="Designed a sleek, minimal menu for Roslyn Coffee — no unnecessary elements, just a clean layout that lets the offering breathe and reads effortlessly in a café setting."
@@ -485,7 +503,8 @@ function MediaMixCaseStudy() {
 
       {/* WHEEL OF WELLNESS */}
       <ShowcaseRow
-        n="15"
+        bg
+        n="14"
         label="Wheel of Wellness · Health"
         title="Wheel of Wellness · Brochure Design"
         description="Designed a premium brochure showcasing wellness services, membership offerings, and brand philosophy through a clean editorial layout, elegant typography, and luxury lifestyle imagery."
@@ -494,10 +513,11 @@ function MediaMixCaseStudy() {
       />
 
 
+
       {/* DESIGN PROCESS */}
       <section className="px-4 sm:px-8 py-24 bg-white/[0.02] border-y border-white/5">
         <div className="mx-auto max-w-6xl">
-          <SectionLabel n="16">Design Process</SectionLabel>
+          <SectionLabel n="15">Design Process</SectionLabel>
           <motion.h2 {...fade} className="font-display text-3xl sm:text-4xl leading-tight font-semibold mb-12">
             Brief to delivery, every week, every client.
           </motion.h2>
@@ -520,7 +540,7 @@ function MediaMixCaseStudy() {
       {/* TOOLS */}
       <section className="px-4 sm:px-8 py-24">
         <div className="mx-auto max-w-6xl">
-          <SectionLabel n="17">Tools Used</SectionLabel>
+          <SectionLabel n="16">Tools Used</SectionLabel>
           <div className="grid sm:grid-cols-3 gap-5">
             {tools.map((t) => (
               <motion.div
@@ -539,7 +559,7 @@ function MediaMixCaseStudy() {
       {/* LEARNINGS */}
       <section className="px-4 sm:px-8 py-24 bg-white/[0.02] border-y border-white/5">
         <div className="mx-auto max-w-6xl">
-          <SectionLabel n="18">Key Learnings &amp; Growth</SectionLabel>
+          <SectionLabel n="17">Key Learnings &amp; Growth</SectionLabel>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {learnings.map((l, i) => (
               <motion.div
@@ -558,7 +578,7 @@ function MediaMixCaseStudy() {
       {/* FINAL OUTCOME */}
       <section className="px-4 sm:px-8 py-24">
         <div className="mx-auto max-w-6xl">
-          <SectionLabel n="19">Final Outcome</SectionLabel>
+          <SectionLabel n="18">Final Outcome</SectionLabel>
           <motion.div {...fade} className="max-w-3xl">
             <h2 className="font-display text-3xl sm:text-5xl leading-[1.05] font-semibold mb-6">
               Eleven weeks. Seven clients. <span className="text-accent-purple italic font-light">One sharper designer.</span>
