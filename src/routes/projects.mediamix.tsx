@@ -90,20 +90,27 @@ function Figure({
   alt,
   caption,
   ratio = "aspect-[16/10]",
+  fit = "cover",
+  frameClass = "border border-white/10 bg-[#0a0a1f]",
+  imgPadding = "",
 }: {
   src: string;
   alt: string;
   caption?: string;
   ratio?: string;
+  fit?: "cover" | "contain";
+  frameClass?: string;
+  imgPadding?: string;
 }) {
+  const fitClass = fit === "contain" ? "object-contain" : "object-cover hover:scale-[1.02]";
   return (
     <motion.figure {...fade} className="space-y-3">
-      <div className={`overflow-hidden rounded-xl border border-white/10 bg-[#0a0a1f] ${ratio}`}>
+      <div className={`overflow-hidden rounded-xl ${frameClass} ${ratio}`}>
         <img
           src={src}
           alt={alt}
           loading="lazy"
-          className="w-full h-full object-cover hover:scale-[1.02] transition-transform duration-700"
+          className={`w-full h-full ${fitClass} ${imgPadding} transition-transform duration-700`}
         />
       </div>
       {caption && <figcaption className="text-xs text-foreground/50">{caption}</figcaption>}
