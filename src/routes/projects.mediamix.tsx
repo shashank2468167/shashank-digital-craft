@@ -91,20 +91,27 @@ function Figure({
   alt,
   caption,
   ratio = "aspect-[16/10]",
+  fit = "cover",
+  bgClass = "bg-[#0a0a1f]",
+  padClass = "",
 }: {
   src: string;
   alt: string;
   caption?: string;
   ratio?: string;
+  fit?: "cover" | "contain";
+  bgClass?: string;
+  padClass?: string;
 }) {
+  const isContain = fit === "contain";
   return (
     <motion.figure {...fade} className="space-y-3">
-      <div className={`overflow-hidden rounded-xl border border-white/10 bg-[#0a0a1f] ${ratio}`}>
+      <div className={`overflow-hidden rounded-xl border border-white/10 ${bgClass} ${ratio} ${padClass}`}>
         <img
           src={src}
           alt={alt}
           loading="lazy"
-          className="w-full h-full object-cover hover:scale-[1.02] transition-transform duration-700"
+          className={`w-full h-full ${isContain ? "object-contain" : "object-cover"} hover:scale-[1.02] transition-transform duration-700`}
         />
       </div>
       {caption && <figcaption className="text-xs text-foreground/50">{caption}</figcaption>}
