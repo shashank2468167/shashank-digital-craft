@@ -520,7 +520,7 @@ function MediaMixCaseStudy() {
       {/* TOOLS */}
       <section className="px-4 sm:px-8 py-24">
         <div className="mx-auto max-w-6xl">
-          <SectionLabel n="17">Tools Used</SectionLabel>
+          <SectionLabel n="15">Tools Used</SectionLabel>
           <div className="grid sm:grid-cols-3 gap-5">
             {tools.map((t) => (
               <motion.div
