@@ -497,7 +497,7 @@ function MediaMixCaseStudy() {
       {/* DESIGN PROCESS */}
       <section className="px-4 sm:px-8 py-24 bg-white/[0.02] border-y border-white/5">
         <div className="mx-auto max-w-6xl">
-          <SectionLabel n="16">Design Process</SectionLabel>
+          <SectionLabel n="14">Design Process</SectionLabel>
           <motion.h2 {...fade} className="font-display text-3xl sm:text-4xl leading-tight font-semibold mb-12">
             Brief to delivery, every week, every client.
           </motion.h2>
