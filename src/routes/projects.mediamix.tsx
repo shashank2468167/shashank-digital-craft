@@ -539,7 +539,7 @@ function MediaMixCaseStudy() {
       {/* LEARNINGS */}
       <section className="px-4 sm:px-8 py-24 bg-white/[0.02] border-y border-white/5">
         <div className="mx-auto max-w-6xl">
-          <SectionLabel n="18">Key Learnings &amp; Growth</SectionLabel>
+          <SectionLabel n="16">Key Learnings &amp; Growth</SectionLabel>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {learnings.map((l, i) => (
               <motion.div
