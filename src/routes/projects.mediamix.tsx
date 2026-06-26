@@ -6,7 +6,7 @@ import p7 from "@/assets/mediamix/mm_clients_logos.jpg.asset.json";
 import p9 from "@/assets/mediamix/mm_overview_logo_v3.png.asset.json";
 import p11 from "@/assets/mediamix/mm_ivoltaa_hero.png.asset.json";
 import p12 from "@/assets/mediamix/mm_ivoltaa_festival.png.asset.json";
-import p13 from "@/assets/mediamix/mm_ivoltaa_100w_v3.png.asset.json";
+import p13 from "@/assets/mediamix/mm_ivoltaa_100w_v4.png.asset.json";
 import p14 from "@/assets/mediamix/mm_ivoltaa_sound.png.asset.json";
 import p15 from "@/assets/mediamix/mm_ivoltaa_reel_new.png.asset.json";
 import pirSocial from "@/assets/mediamix/mm_pir_social.png.asset.json";
@@ -14,8 +14,8 @@ import pirCanopy from "@/assets/mediamix/mm_pir_canopy.png.asset.json";
 import pirCard from "@/assets/mediamix/mm_pir_card.png.asset.json";
 import p25 from "@/assets/mediamix/mm_page_25.jpg.asset.json";
 import saanGrid from "@/assets/mediamix/mm_saan_grid.png.asset.json";
-import fsProfile from "@/assets/mediamix/mm_fs_snacks.png.asset.json";
-import fsReelsTop from "@/assets/mediamix/mm_fs_reels_top.png.asset.json";
+import fsProfile from "@/assets/mediamix/mm_fs_profile_v2.png.asset.json";
+import fsReelsTop from "@/assets/mediamix/mm_fs_reels_top_v2.png.asset.json";
 import fsReels1 from "@/assets/mediamix/mm_fs_reels1.png.asset.json";
 import p35 from "@/assets/mediamix/mm_page_35.jpg.asset.json";
 import wowBrochure from "@/assets/mediamix/mm_wow_brochure.png.asset.json";
@@ -389,7 +389,7 @@ function MediaMixCaseStudy() {
 
           <div className="space-y-6">
             <Figure src={p12.url} alt="iVoltaa festival creatives — Lohri, Vasant Panchami & Makar Sankranti" ratio="aspect-[16/10]" caption="Festival Creatives — Lohri, Vasant Panchami & Makar Sankranti. Created festive social media campaigns aligned with the iVoltaa brand identity while celebrating major Indian festivals through engaging digital content." />
-            <Figure src={p13.url} alt="iVoltaa — Pass the Power, 100W Super Fast Charging Campaign" ratio="aspect-[16/10]" fit="contain" frameClass="border border-white/10 bg-[#3a55c8]" caption="Pass the Power — 100W Super Fast Charging Campaign. Developed a high-impact promotional creative highlighting iVoltaa's 100W fast charging capability through bold typography, strong visual hierarchy, and product-focused storytelling." />
+            <Figure src={p13.url} alt="iVoltaa — Pass the Power, 100W Super Fast Charging Campaign" ratio="aspect-[16/10]" caption="Pass the Power — 100W Super Fast Charging Campaign. Developed a high-impact promotional creative highlighting iVoltaa's 100W fast charging capability through bold typography, strong visual hierarchy, and product-focused storytelling." />
             <Figure src={p14.url} alt="iVoltaa — Ignite Your Music, Flawless Uninterrupted Sound" ratio="aspect-[16/10]" caption="Ignite Your Music — Flawless, Uninterrupted Sound. Designed a campaign emphasizing premium audio quality and uninterrupted listening experiences through immersive visuals and dynamic product presentation." />
             <Figure src={p15.url} alt="iVoltaa — Animated Product Reel" ratio="aspect-[16/10]" caption="Animated Product Reel — Created an animated social media reel for iVoltaa showcasing audio accessories through dynamic motion graphics and product-focused storytelling. The reel combines engaging visual transitions, modern typography, and premium product presentation to highlight connectivity and performance while maintaining iVoltaa’s sleek technology-driven brand identity." />
           </div>
@@ -477,9 +477,6 @@ function MediaMixCaseStudy() {
                 src={fsReelsTop.url}
                 alt="The Food Street — Snack campaign reels (top)"
                 ratio="aspect-[16/10]"
-                fit="contain"
-                frameClass="border border-white/10 bg-[#1a2557]"
-                imgPadding="p-4"
               />
               <Figure
                 src={fsReels1.url}
