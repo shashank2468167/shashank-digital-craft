@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 
 import p7 from "@/assets/mediamix/mm_clients_logos.jpg.asset.json";
-import p9 from "@/assets/mediamix/mm_overview_logo_new.png.asset.json";
+import p9 from "@/assets/mediamix/mm_overview_logo_v3.png.asset.json";
 import p11 from "@/assets/mediamix/mm_ivoltaa_hero.png.asset.json";
 import p12 from "@/assets/mediamix/mm_ivoltaa_festival.png.asset.json";
-import p13 from "@/assets/mediamix/mm_ivoltaa_100w_new.png.asset.json";
+import p13 from "@/assets/mediamix/mm_ivoltaa_100w_v3.png.asset.json";
 import p14 from "@/assets/mediamix/mm_ivoltaa_sound.png.asset.json";
 import p15 from "@/assets/mediamix/mm_ivoltaa_reel_new.png.asset.json";
 import pirSocial from "@/assets/mediamix/mm_pir_social.png.asset.json";
@@ -14,7 +14,7 @@ import pirCanopy from "@/assets/mediamix/mm_pir_canopy.png.asset.json";
 import pirCard from "@/assets/mediamix/mm_pir_card.png.asset.json";
 import p25 from "@/assets/mediamix/mm_page_25.jpg.asset.json";
 import saanGrid from "@/assets/mediamix/mm_saan_grid.png.asset.json";
-import fsProfile from "@/assets/mediamix/mm_fs_profile.png.asset.json";
+import fsProfile from "@/assets/mediamix/mm_fs_snacks.png.asset.json";
 import fsReelsTop from "@/assets/mediamix/mm_fs_reels_top.png.asset.json";
 import fsReels1 from "@/assets/mediamix/mm_fs_reels1.png.asset.json";
 import p35 from "@/assets/mediamix/mm_page_35.jpg.asset.json";
@@ -102,15 +102,15 @@ function Figure({
   frameClass?: string;
   imgPadding?: string;
 }) {
-  const fitClass = fit === "contain" ? "object-contain" : "object-cover hover:scale-[1.02]";
+  const fitClass = fit === "contain" ? "object-contain" : "object-cover";
   return (
     <motion.figure {...fade} className="space-y-3">
-      <div className={`overflow-hidden rounded-xl ${frameClass} ${ratio}`}>
+      <div className={`group cursor-pointer overflow-hidden rounded-xl ${frameClass} ${ratio} transition-all duration-[350ms] ease-out hover:-translate-y-1 hover:shadow-[0_30px_80px_-30px_rgba(139,92,246,0.45)]`}>
         <img
           src={src}
           alt={alt}
           loading="lazy"
-          className={`w-full h-full ${fitClass} ${imgPadding} transition-transform duration-700`}
+          className={`w-full h-full ${fitClass} ${imgPadding} transition-transform duration-[400ms] ease-out group-hover:scale-[1.04]`}
         />
       </div>
       {caption && <figcaption className="text-xs text-foreground/50">{caption}</figcaption>}
