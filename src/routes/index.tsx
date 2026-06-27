@@ -178,7 +178,7 @@ function Hero() {
           <img
             src={heroImg}
             alt="Designer workstation with dual monitors, lamp, camera and accessories"
-            className="relative w-[52%] min-w-[320px] max-w-[640px] h-auto object-contain animate-hero-float drop-shadow-[0_30px_60px_rgba(139,92,246,0.25)]"
+            className="relative w-full max-w-[640px] h-auto object-contain animate-hero-float drop-shadow-[0_30px_60px_rgba(139,92,246,0.25)]"
           />
         </motion.div>
 
