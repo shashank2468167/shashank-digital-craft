@@ -1,11 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import {
   ArrowRight, Download, Mail, Phone, MapPin, ExternalLink,
   Palette, Box, Sparkles, Layers, Brush, Gamepad2, Package,
   Globe, Camera, Lightbulb, Send,
 } from "lucide-react";
+import { toast } from "sonner";
 import heroImg from "@/assets/hero-illustration.png";
 import profileAsset from "@/assets/profile.png.asset.json";
 import resumeAsset from "@/assets/resume.png.asset.json";
