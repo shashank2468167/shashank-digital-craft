@@ -481,29 +481,66 @@ function Contact() {
             </div>
           </motion.div>
 
-          <motion.form
-            {...fadeUp}
-            onSubmit={(e) => e.preventDefault()}
-            className="space-y-4"
-          >
-            <Field label="Your Name" placeholder="John Doe" />
-            <Field label="Email" placeholder="you@email.com" type="email" />
-            <Field label="Subject" placeholder="Project enquiry" />
-            <div>
-              <label className="text-xs uppercase tracking-wider text-muted-foreground mb-2 block">Message</label>
-              <textarea
-                rows={4}
-                placeholder="Tell me about your project…"
-                className="w-full bg-white/5 border border-white/10 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:border-primary/60 transition-colors"
-              />
-            </div>
-            <button className="btn-primary w-full justify-center">
-              Send Message <Send className="w-4 h-4" />
-            </button>
-          </motion.form>
+          <ContactForm />
         </div>
       </div>
     </section>
+  );
+}
+
+const EMAILJS_SERVICE_ID = "service_w4l7d4u";
+const EMAILJS_TEMPLATE_ID = "template_ypcsoli";
+const EMAILJS_PUBLIC_KEY = "aYlqHZUV2T8sJw9Pi";
+
+function ContactForm() {
+  const formRef = useRef<HTMLFormElement>(null);
+  const [sending, setSending] = useState(false);
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    if (!formRef.current) return;
+    setSending(true);
+    try {
+      await emailjs.sendForm(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        { publicKey: EMAILJS_PUBLIC_KEY },
+      );
+      toast.success("Message sent! I'll get back to you soon.");
+      formRef.current.reset();
+    } catch (err) {
+      console.error("EmailJS error:", err);
+      toast.error("Couldn't send message. Please try again or email me directly.");
+    } finally {
+      setSending(false);
+    }
+  }
+
+  return (
+    <motion.form
+      ref={formRef}
+      {...fadeUp}
+      onSubmit={handleSubmit}
+      className="space-y-4"
+    >
+      <Field label="Your Name" name="from_name" placeholder="John Doe" required />
+      <Field label="Email" name="from_email" placeholder="you@email.com" type="email" required />
+      <Field label="Subject" name="subject" placeholder="Project enquiry" required />
+      <div>
+        <label className="text-xs uppercase tracking-wider text-muted-foreground mb-2 block">Message</label>
+        <textarea
+          name="message"
+          rows={4}
+          required
+          placeholder="Tell me about your project…"
+          className="w-full bg-white/5 border border-white/10 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:border-primary/60 transition-colors"
+        />
+      </div>
+      <button type="submit" disabled={sending} className="btn-primary w-full justify-center disabled:opacity-60">
+        {sending ? "Sending…" : <>Send Message <Send className="w-4 h-4" /></>}
+      </button>
+    </motion.form>
   );
 }
 
