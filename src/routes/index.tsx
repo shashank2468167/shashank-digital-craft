@@ -455,10 +455,11 @@ function Projects() {
                 className="group glass-card overflow-hidden hover:border-primary/50 transition-all"
               >
                 {route ? (
-                  <Link to={route} className="block">{cardInner}</Link>
+                  <Link to={route} data-cursor="project" className="block">{cardInner}</Link>
                 ) : (
                   cardInner
                 )}
+
               </motion.article>
             );
           })}
