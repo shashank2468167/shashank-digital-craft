@@ -74,8 +74,10 @@ const fadeUp = {
 function Portfolio() {
   return (
     <div className="min-h-screen text-foreground">
+      <CustomCursor />
       <Nav />
       <Hero />
+
       <About />
       <Skills />
       <Experience />
