@@ -132,8 +132,9 @@ function Hero() {
             <TypewriterRole />
           </h1>
           <div className="mt-10 flex flex-wrap gap-4">
-            <a href={resumeAsset.url} download="Shashank_Kumar_Resume.png" className="btn-outline">Download Resume</a>
-            <a href="#projects" className="btn-outline">View Portfolio</a>
+            <a href={resumeAsset.url} download="Shashank_Kumar_Resume.png" data-cursor="download" className="btn-outline">Download Resume</a>
+            <a href="#projects" data-cursor="button" className="btn-outline">View Portfolio</a>
+
           </div>
 
         </motion.div>
