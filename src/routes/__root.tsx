@@ -81,9 +81,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "Portfolio of Shashank Kumar, a Fashion Communication student at NIFT Srinagar specializing in branding, UI/UX, and 3D visualization." },
       { name: "author", content: "Shashank Kumar" },
       { property: "og:title", content: "Shashank Kumar — Graphic Designer & 3D Artist" },
-      { property: "og:description", content: "Branding, UI/UX, and immersive 3D experiences by Shashank Kumar." },
+      { property: "og:description", content: "Portfolio of Shashank Kumar, a Fashion Communication student at NIFT Srinagar specializing in branding, UI/UX, and 3D visualization." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Shashank Kumar — Graphic Designer & 3D Artist" },
+      { name: "twitter:description", content: "Portfolio of Shashank Kumar, a Fashion Communication student at NIFT Srinagar specializing in branding, UI/UX, and 3D visualization." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/23b31ef1-4858-4c23-9b25-0c9daeac8c58" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/23b31ef1-4858-4c23-9b25-0c9daeac8c58" },
     ],
     links: [
       {
