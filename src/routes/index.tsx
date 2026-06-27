@@ -143,16 +143,45 @@ function Hero() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative"
+          className="relative flex items-center justify-center"
         >
+          {/* Soft purple ambient glow behind the workstation */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-0 -z-10"
+            style={{
+              background:
+                "radial-gradient(50% 45% at 50% 55%, rgba(139,92,246,0.35), rgba(139,92,246,0.12) 45%, rgba(139,92,246,0) 75%)",
+              filter: "blur(30px)",
+            }}
+          />
+          {/* Under-desk purple glow */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute left-1/2 bottom-2 -z-10 h-24 w-[70%] -translate-x-1/2 rounded-full"
+            style={{
+              background:
+                "radial-gradient(closest-side, rgba(139,92,246,0.55), rgba(139,92,246,0) 80%)",
+              filter: "blur(24px)",
+            }}
+          />
+          {/* Subtle monitor glow */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute left-1/2 top-[12%] -z-10 h-32 w-[55%] -translate-x-1/2 rounded-full"
+            style={{
+              background:
+                "radial-gradient(closest-side, rgba(139,92,246,0.35), rgba(139,92,246,0) 80%)",
+              filter: "blur(28px)",
+            }}
+          />
           <img
             src={heroImg}
-            alt="Designer at futuristic 3D workstation"
-            width={1024}
-            height={1024}
-            className="relative w-full max-w-lg mx-auto animate-float"
+            alt="Designer workstation with dual monitors, lamp, camera and accessories"
+            className="relative w-[52%] min-w-[320px] max-w-[640px] h-auto object-contain animate-hero-float drop-shadow-[0_30px_60px_rgba(139,92,246,0.25)]"
           />
         </motion.div>
+
       </div>
     </section>
   );
