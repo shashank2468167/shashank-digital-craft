@@ -8,10 +8,13 @@ import {
   Globe, Camera, Lightbulb, Send,
 } from "lucide-react";
 import { toast } from "sonner";
-import heroImg from "@/assets/hero-illustration.png";
+import heroAsset from "@/assets/hero-workstation.png.asset.json";
 import profileAsset from "@/assets/profile.png.asset.json";
 import resumeAsset from "@/assets/resume.png.asset.json";
+import CustomCursor from "@/components/CustomCursor";
+const heroImg = heroAsset.url;
 const profileImg = profileAsset.url;
+
 
 const ROLES = ["Graphic Designer", "3D Artist", "Brand Designer", "UI/UX Designer", "Visual Designer"];
 
