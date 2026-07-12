@@ -143,7 +143,7 @@ function Hero() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative flex items-center justify-center"
+          className="relative flex items-center justify-center lg:justify-end lg:pr-4"
         >
           {/* Soft purple ambient glow behind the workstation */}
           <div
@@ -165,6 +165,16 @@ function Hero() {
               filter: "blur(24px)",
             }}
           />
+          {/* Soft depth shadow under the desk */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute left-1/2 bottom-0 -z-10 h-6 w-[65%] -translate-x-1/2 rounded-[50%]"
+            style={{
+              background:
+                "radial-gradient(closest-side, rgba(0,0,0,0.55), rgba(0,0,0,0) 80%)",
+              filter: "blur(16px)",
+            }}
+          />
           {/* Subtle monitor glow */}
           <div
             aria-hidden
@@ -178,9 +188,12 @@ function Hero() {
           <img
             src={heroImg}
             alt="Designer workstation with dual monitors, lamp, camera and accessories"
-            className="relative w-full max-w-[640px] h-auto object-contain animate-hero-float drop-shadow-[0_30px_60px_rgba(139,92,246,0.25)]"
+            loading="eager"
+            decoding="async"
+            className="relative w-full max-w-[420px] sm:max-w-[520px] lg:max-w-[600px] h-auto object-contain animate-hero-float drop-shadow-[0_30px_60px_rgba(139,92,246,0.28)]"
           />
         </motion.div>
+
 
       </div>
     </section>
