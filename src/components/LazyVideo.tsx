@@ -84,7 +84,6 @@ export function LazyVideo({
           controlsList="nodownload"
           preload="metadata"
           playsInline
-          crossOrigin="anonymous"
           onLoadedMetadata={() => setReady(true)}
           onError={() => setErrored(true)}
           className="relative block w-full h-full object-cover bg-black"
