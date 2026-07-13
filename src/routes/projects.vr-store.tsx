@@ -189,24 +189,16 @@ function VideoBlock({
   label: string;
 }) {
   return (
-    <motion.div {...fade} className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#07071a] group">
+    <motion.div {...fade} className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#07071a]">
       <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-blue-500/10 pointer-events-none z-10" />
-      <video
-        src={src}
-        poster={poster}
-        autoPlay
-        muted
-        loop
-        playsInline
-        controls
-        className="w-full h-full object-cover"
-      />
+      <LazyVideo src={src} poster={poster} aspectRatio="16 / 9" />
       <div className="absolute top-4 left-4 z-20 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/50 backdrop-blur border border-white/15 text-[11px] uppercase tracking-[0.2em]">
         <Play className="w-3 h-3 text-accent-purple" /> {label}
       </div>
     </motion.div>
   );
 }
+
 
 function VrStoreCaseStudy() {
   return (

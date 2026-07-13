@@ -364,20 +364,16 @@ function HRadheCaseStudy() {
             <Figure src={p45.url} alt="Website key screen" ratio="aspect-[4/5]" />
           </div>
           <motion.figure {...fade} className="space-y-3">
-            <div className="group cursor-pointer rounded-xl overflow-hidden bg-black transition-all duration-[400ms] ease-out hover:-translate-y-1 hover:shadow-[0_30px_80px_-30px_rgba(0,0,0,0.75)]">
-              <video
+            <div className="rounded-xl overflow-hidden bg-black">
+              <LazyVideo
                 src={websiteVideo.url}
                 poster={websitePoster.url}
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="metadata"
-                className="block w-full h-auto object-cover transition-transform duration-[500ms] ease-out group-hover:scale-[1.03]"
+                aspectRatio="16 / 9"
               />
             </div>
             <figcaption className="text-xs text-foreground/50">Website — final design</figcaption>
           </motion.figure>
+
         </div>
       </section>
 
