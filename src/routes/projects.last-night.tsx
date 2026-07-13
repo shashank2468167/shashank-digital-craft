@@ -595,8 +595,8 @@ function LastNightCaseStudy() {
           <Link to="/" hash="projects" className="inline-flex items-center gap-2 text-foreground/80 hover:text-accent-purple transition-colors">
             <ArrowLeft className="w-4 h-4" /> All projects
           </Link>
-          <Link to="/projects/mediamix" className="inline-flex items-center gap-2 text-foreground/80 hover:text-accent-purple transition-colors">
-            Next case study — MEDIAMIX Internship <ArrowUpRight className="w-4 h-4" />
+          <Link to="/projects/h-radhe" className="inline-flex items-center gap-2 text-foreground/80 hover:text-accent-purple transition-colors">
+            Next case study — H. Radhe Jewellery <ArrowUpRight className="w-4 h-4" />
           </Link>
         </div>
       </section>

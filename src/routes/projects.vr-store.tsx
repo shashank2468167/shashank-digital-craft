@@ -658,13 +658,12 @@ function VrStoreCaseStudy() {
             Back to Portfolio
           </Link>
           <Link
-            to="/"
-            hash="contact"
+            to="/projects/mediamix"
             className="group justify-self-end flex items-center gap-3 text-right text-sm text-foreground/80 hover:text-accent-purple transition-colors"
           >
             <div>
-              <div className="text-[11px] uppercase tracking-[0.25em] text-foreground/45">Next</div>
-              <div className="font-display text-lg">Get in touch</div>
+              <div className="text-[11px] uppercase tracking-[0.25em] text-foreground/45">Next Project</div>
+              <div className="font-display text-lg">MEDIAMIX Internship</div>
             </div>
             <ArrowRight className="w-4 h-4" />
           </Link>
