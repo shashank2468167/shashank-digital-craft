@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
+import { LazyVideo } from "@/components/LazyVideo";
+
 
 
 import p22 from "@/assets/hradhe/u57.jpg.asset.json";
