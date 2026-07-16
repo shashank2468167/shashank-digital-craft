@@ -325,8 +325,8 @@ function HRadheCaseStudy() {
           <div className="mt-12">
             <h3 className="text-sm uppercase tracking-[0.3em] text-foreground/60 mb-6">Polki & Jadau craft creatives</h3>
             <div className="grid md:grid-cols-2 gap-6">
-              <Figure src={p39.url} alt="Polki creative" caption="Polki — diamonds in their purest form" />
-              <Figure src={p40.url} alt="Jadau creative" caption="Jadau — the art of setting, perfected by hand" />
+              <Figure src={p40.url} alt="Polki creative" caption="Polki — diamonds in their purest form" />
+              <Figure src={p39.url} alt="Jadau creative" caption="Jadau — the art of setting, perfected by hand" />
             </div>
           </div>
 
@@ -503,8 +503,7 @@ function HRadheCaseStudy() {
             <div className="text-sm">Back to portfolio</div>
           </Link>
           <Link
-            to="/"
-            hash="projects"
+            to="/projects/vr-store"
             className="text-right p-6 rounded-xl border border-white/10 hover:border-accent-purple/60 transition-colors group"
           >
             <div className="text-[11px] uppercase tracking-[0.25em] text-foreground/45 mb-2 flex items-center justify-end gap-2">
