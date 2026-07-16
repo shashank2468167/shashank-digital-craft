@@ -503,8 +503,7 @@ function HRadheCaseStudy() {
             <div className="text-sm">Back to portfolio</div>
           </Link>
           <Link
-            to="/"
-            hash="projects"
+            to="/projects/vr-store"
             className="text-right p-6 rounded-xl border border-white/10 hover:border-accent-purple/60 transition-colors group"
           >
             <div className="text-[11px] uppercase tracking-[0.25em] text-foreground/45 mb-2 flex items-center justify-end gap-2">
