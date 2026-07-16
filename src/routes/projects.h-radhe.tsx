@@ -1,8 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
-import { LazyVideo } from "@/components/LazyVideo";
-
 
 
 import p22 from "@/assets/hradhe/u57.jpg.asset.json";
@@ -366,16 +364,20 @@ function HRadheCaseStudy() {
             <Figure src={p45.url} alt="Website key screen" ratio="aspect-[4/5]" />
           </div>
           <motion.figure {...fade} className="space-y-3">
-            <div className="rounded-xl overflow-hidden bg-black">
-              <LazyVideo
+            <div className="group cursor-pointer rounded-xl overflow-hidden bg-black transition-all duration-[400ms] ease-out hover:-translate-y-1 hover:shadow-[0_30px_80px_-30px_rgba(0,0,0,0.75)]">
+              <video
                 src={websiteVideo.url}
                 poster={websitePoster.url}
-                aspectRatio="16 / 9"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                className="block w-full h-auto object-cover transition-transform duration-[500ms] ease-out group-hover:scale-[1.03]"
               />
             </div>
             <figcaption className="text-xs text-foreground/50">Website — final design</figcaption>
           </motion.figure>
-
         </div>
       </section>
 
@@ -501,7 +503,8 @@ function HRadheCaseStudy() {
             <div className="text-sm">Back to portfolio</div>
           </Link>
           <Link
-            to="/projects/vr-store"
+            to="/"
+            hash="projects"
             className="text-right p-6 rounded-xl border border-white/10 hover:border-accent-purple/60 transition-colors group"
           >
             <div className="text-[11px] uppercase tracking-[0.25em] text-foreground/45 mb-2 flex items-center justify-end gap-2">
