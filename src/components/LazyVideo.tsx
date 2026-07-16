@@ -102,15 +102,7 @@ export function LazyVideo({
       {errored && (
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-black/70 text-white/80 text-sm p-6 text-center">
           <AlertCircle className="w-6 h-6" />
-          <p>This video couldn't be loaded.</p>
-          <a
-            href={src}
-            target="_blank"
-            rel="noreferrer"
-            className="underline text-white/70 hover:text-white text-xs"
-          >
-            Open video in a new tab
-          </a>
+          <p>Video is loading…</p>
         </div>
       )}
     </div>
