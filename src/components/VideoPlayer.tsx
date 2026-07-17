@@ -70,11 +70,20 @@ export function VideoPlayer({
     setStatus("loading");
     el.load();
 
+    el.addEventListener("loadedmetadata", onLoaded);
     el.addEventListener("loadeddata", onLoaded);
+    el.addEventListener("canplay", onLoaded);
     el.addEventListener("error", onError);
     el.addEventListener("stalled", onStalled);
+    // Safety: if metadata never fires within 8s, drop the spinner so controls are usable.
+    const timeout = window.setTimeout(() => {
+      setStatus((s) => (s === "loading" ? "ready" : s));
+    }, 8000);
     return () => {
+      window.clearTimeout(timeout);
+      el.removeEventListener("loadedmetadata", onLoaded);
       el.removeEventListener("loadeddata", onLoaded);
+      el.removeEventListener("canplay", onLoaded);
       el.removeEventListener("error", onError);
       el.removeEventListener("stalled", onStalled);
       if (!el.paused) el.pause();
