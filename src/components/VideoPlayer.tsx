@@ -97,7 +97,7 @@ export function VideoPlayer({
         controls={controls}
         playsInline={playsInline}
         preload={preload}
-        crossOrigin="anonymous"
+        
         className="block w-full h-full object-cover"
       >
         <source src={src} type={type} />
