@@ -192,7 +192,7 @@ function VideoBlock({
   return (
     <motion.div {...fade} className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#07071a] group">
       <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-blue-500/10 pointer-events-none z-10" />
-      <video
+      <VideoPlayer
         src={src}
         poster={poster}
         autoPlay
@@ -200,7 +200,8 @@ function VideoBlock({
         loop
         playsInline
         controls
-        className="w-full h-full object-cover"
+        preload="metadata"
+        className="w-full aspect-video"
       />
       <div className="absolute top-4 left-4 z-20 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/50 backdrop-blur border border-white/15 text-[11px] uppercase tracking-[0.2em]">
         <Play className="w-3 h-3 text-accent-purple" /> {label}
