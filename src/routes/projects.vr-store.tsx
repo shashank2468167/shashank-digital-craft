@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, ArrowUpRight, Play } from "lucide-react";
+import { VideoPlayer } from "@/components/VideoPlayer";
 
 import vrVideo from "@/assets/vrstore/vr-store.mp4.asset.json";
 import mallVideo from "@/assets/vrstore/mall-walkthrough.mp4.asset.json";
