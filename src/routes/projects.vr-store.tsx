@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, ArrowUpRight, Play } from "lucide-react";
 import { VideoPlayer } from "@/components/VideoPlayer";
 
-import vrVideo from "@/assets/vrstore/vr-store.mp4.asset.json";
-import mallVideo from "@/assets/vrstore/mall-walkthrough.mp4.asset.json";
+const vrVideo = { url: "/videos/vr-online-store-experience.mp4" };
+const mallVideo = { url: "/videos/srinagar-city-mall.mp4" };
 import vr01 from "@/assets/vrstore/vr_01.jpg.asset.json";
 import vr03 from "@/assets/vrstore/vr_03.jpg.asset.json";
 import vr06 from "@/assets/vrstore/vr_06.jpg.asset.json";
