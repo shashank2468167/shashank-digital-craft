@@ -24,7 +24,7 @@ import p41 from "@/assets/hradhe/ip1.jpg.asset.json";
 import p42 from "@/assets/hradhe/ip8.jpg.asset.json";
 import p44 from "@/assets/hradhe/ip16.jpg.asset.json";
 import p45 from "@/assets/hradhe/p45.jpg.asset.json";
-import websiteVideo from "@/assets/hradhe/website-showcase.webm.asset.json";
+const websiteVideo = { url: "/videos/website-final-design.mp4" };
 import websitePoster from "@/assets/hradhe/website-poster.jpg.asset.json";
 import arTryon from "@/assets/hradhe/ar-tryon.png.asset.json";
 import necklace3d from "@/assets/hradhe/necklace-3d.png.asset.json";
